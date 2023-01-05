@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 struct ContentView: View {
+    var viewModel = ContentViewModel()
+    @State var inputName: String = ""
     @State var inputEmail: String = ""
     @State var inputPassword: String = ""
     var body: some View {
@@ -15,6 +18,8 @@ struct ContentView: View {
             VStack(alignment: .center) {
                 Text("Fire Base auth").font(.system(size: 36, weight: .heavy))
                 VStack(spacing: 24) {
+                    TextField("名前", text: $inputName).textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxWidth: 280)
                     TextField("メールアドレス", text: $inputEmail).textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(maxWidth: 280)
                     SecureField("パスワード", text: $inputPassword)
@@ -23,10 +28,11 @@ struct ContentView: View {
                 }
                 .frame(height: 200)
                 Button(action: {
-                   print("Login処理")
+                   print("##ユーザ登録処理")
+                    viewModel.pushButton(name: inputName, email: inputEmail, password: inputPassword)
                 },
                label: {
-                   Text("Login")
+                   Text("ユーザ登録")
                        .fontWeight(.medium)
                        .frame(minWidth: 160)
                        .foregroundColor(.white)
