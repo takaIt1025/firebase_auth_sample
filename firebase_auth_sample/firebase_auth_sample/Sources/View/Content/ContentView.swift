@@ -9,22 +9,17 @@ import SwiftUI
 import FirebaseCore
 
 struct ContentView: View {
-    @State var inputName: String = ""
-    @State var inputEmail: String = ""
-    @State var inputPassword: String = ""
-    @State var page : Int? = 0
     @ObservedObject var viewModel = ContentViewModel()
-
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
                 Text("Fire Base auth").font(.system(size: 36, weight: .heavy))
                 VStack(spacing: 24) {
-                    TextField("名前", text: $inputName).textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("名前", text: $viewModel.inputName).textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(maxWidth: 280)
-                    TextField("メールアドレス", text: $inputEmail).textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("メールアドレス", text: $viewModel.inputEmail).textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(maxWidth: 280)
-                    SecureField("パスワード", text: $inputPassword)
+                    SecureField("パスワード", text: $viewModel.inputPassword)
                                             .textFieldStyle(RoundedBorderTextFieldStyle())
                                             .frame(maxWidth: 280)
                 }
@@ -35,10 +30,7 @@ struct ContentView: View {
                 }
                         Button(action: {
                        print("##ユーザ登録処理")
-                            
-                            
-                        viewModel.pushButton(name: inputName, email: inputEmail, password: inputPassword)
-                            page = viewModel.page
+                            viewModel.pushButton()
                         },
                        label: {
                            Text("ユーザ登録")

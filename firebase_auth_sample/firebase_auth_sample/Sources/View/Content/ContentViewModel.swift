@@ -9,15 +9,18 @@ import Foundation
 import FirebaseAuth
 
 class ContentViewModel :ObservableObject{
+    @Published var inputName: String = ""
+    @Published var inputEmail: String = ""
+    @Published var inputPassword: String = ""
     @Published var page : Int? = 0
-    func pushButton(name: String, email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+    func pushButton() {
+        Auth.auth().createUser(withEmail: self.inputEmail, password: self.inputPassword) { result, error in
             guard let user = result?.user else {
                 print("##登録エラー##")
                 return
             }
             let request = user.createProfileChangeRequest()
-            request.displayName = name
+            request.displayName = self.inputName
             request.commitChanges { error in
                 if error == nil {
                     print("##登録完了")
