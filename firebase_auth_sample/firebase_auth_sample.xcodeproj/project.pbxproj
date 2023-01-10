@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D75C74440306F31BE7A36EB /* Pods_firebase_auth_sample__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA45A29D67856ECE3D41CDC /* Pods_firebase_auth_sample__macOS_.framework */; };
+		323AB2502967E1830067F854 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB24F2967E1830067F854 /* HomeViewController.swift */; };
 		32A261BE2967120D00582809 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BD2967120D00582809 /* Tests_iOS.swift */; };
 		32A261C02967120D00582809 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BF2967120D00582809 /* Tests_iOSLaunchTests.swift */; };
 		32A261CA2967120D00582809 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261C92967120D00582809 /* Tests_macOS.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0E3E920989EF4F5ABAD61346 /* Pods-firebase_auth_sample (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase_auth_sample (iOS).release.xcconfig"; path = "Target Support Files/Pods-firebase_auth_sample (iOS)/Pods-firebase_auth_sample (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		2DA4DF55FF87D136636375D1 /* Pods-firebase_auth_sample (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase_auth_sample (macOS).release.xcconfig"; path = "Target Support Files/Pods-firebase_auth_sample (macOS)/Pods-firebase_auth_sample (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		323AB24F2967E1830067F854 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		32A261A52967120500582809 /* firebase_auth_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebase_auth_sampleApp.swift; sourceTree = "<group>"; };
 		32A261A62967120500582809 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32A261A72967120D00582809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,10 +113,77 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		323AB2472967C3970067F854 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				323AB24E2967E1530067F854 /* Home */,
+				323AB24D2967C5EB0067F854 /* Components */,
+				323AB24C2967C5CC0067F854 /* Content */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		323AB2482967C4D90067F854 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				323AB24B2967C5B80067F854 /* API */,
+				323AB2472967C3970067F854 /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		323AB2492967C5040067F854 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				32A261E429671DB200582809 /* GoogleService-Info.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		323AB24A2967C5740067F854 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32A261A72967120D00582809 /* Assets.xcassets */,
+				323AB2492967C5040067F854 /* Plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		323AB24B2967C5B80067F854 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		323AB24C2967C5CC0067F854 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				32A261A62967120500582809 /* ContentView.swift */,
+				32A261EB2967215B00582809 /* ContentViewModel.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		323AB24D2967C5EB0067F854 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		323AB24E2967E1530067F854 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				323AB24F2967E1830067F854 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		32A2619F2967120500582809 = {
 			isa = PBXGroup;
 			children = (
-				32A261A42967120500582809 /* Shared */,
+				32A261A42967120500582809 /* firebase_auth_sample */,
 				32A261B32967120D00582809 /* macOS */,
 				32A261BC2967120D00582809 /* Tests iOS */,
 				32A261C82967120D00582809 /* Tests macOS */,
@@ -124,17 +193,15 @@
 			);
 			sourceTree = "<group>";
 		};
-		32A261A42967120500582809 /* Shared */ = {
+		32A261A42967120500582809 /* firebase_auth_sample */ = {
 			isa = PBXGroup;
 			children = (
 				32A261A52967120500582809 /* firebase_auth_sampleApp.swift */,
-				32A261A62967120500582809 /* ContentView.swift */,
-				32A261E429671DB200582809 /* GoogleService-Info.plist */,
-				32A261EB2967215B00582809 /* ContentViewModel.swift */,
-				32A261A72967120D00582809 /* Assets.xcassets */,
+				323AB24A2967C5740067F854 /* Resources */,
+				323AB2482967C4D90067F854 /* Sources */,
 				32A261EE296724BD00582809 /* AppDelegate.swift */,
 			);
-			path = Shared;
+			path = firebase_auth_sample;
 			sourceTree = "<group>";
 		};
 		32A261AD2967120D00582809 /* Products */ = {
@@ -430,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323AB2502967E1830067F854 /* HomeViewController.swift in Sources */,
 				32A261EF296724BD00582809 /* AppDelegate.swift in Sources */,
 				32A261CF2967120D00582809 /* ContentView.swift in Sources */,
 				32A261CD2967120D00582809 /* firebase_auth_sampleApp.swift in Sources */,
