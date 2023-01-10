@@ -12,40 +12,13 @@ struct HomeViewController: View {
 //    var viewModel = ContentViewModel()
 //    @State var inputName: String = ""
 //    @State var inputEmail: String = ""
-//    @State var inputPassword: String = ""
+    @State var selectTag = 1
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center) {
-                Text("一覧")
-                    .font(.title)
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                }
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                }
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                }
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                }
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                }
-            }.listStyle(GroupedListStyle()).navigationTitle("商品")
+        TabView(selection: $selectTag) {
+            ItemsListView().tabItem{
+                Text("tab1")
+            }.tag(1)
+            Text("test1").tabItem{Text("tab2")}.tag(2)
         }
     }
 }

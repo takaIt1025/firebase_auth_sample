@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D75C74440306F31BE7A36EB /* Pods_firebase_auth_sample__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA45A29D67856ECE3D41CDC /* Pods_firebase_auth_sample__macOS_.framework */; };
 		323AB2502967E1830067F854 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB24F2967E1830067F854 /* HomeViewController.swift */; };
+		323AB254296DE5BB0067F854 /* ItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB253296DE5BB0067F854 /* ItemsListView.swift */; };
 		32A261BE2967120D00582809 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BD2967120D00582809 /* Tests_iOS.swift */; };
 		32A261C02967120D00582809 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BF2967120D00582809 /* Tests_iOSLaunchTests.swift */; };
 		32A261CA2967120D00582809 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261C92967120D00582809 /* Tests_macOS.swift */; };
@@ -49,6 +50,7 @@
 		0E3E920989EF4F5ABAD61346 /* Pods-firebase_auth_sample (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase_auth_sample (iOS).release.xcconfig"; path = "Target Support Files/Pods-firebase_auth_sample (iOS)/Pods-firebase_auth_sample (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		2DA4DF55FF87D136636375D1 /* Pods-firebase_auth_sample (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase_auth_sample (macOS).release.xcconfig"; path = "Target Support Files/Pods-firebase_auth_sample (macOS)/Pods-firebase_auth_sample (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		323AB24F2967E1830067F854 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		323AB253296DE5BB0067F854 /* ItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListView.swift; sourceTree = "<group>"; };
 		32A261A52967120500582809 /* firebase_auth_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebase_auth_sampleApp.swift; sourceTree = "<group>"; };
 		32A261A62967120500582809 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32A261A72967120D00582809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				323AB24F2967E1830067F854 /* HomeViewController.swift */,
+				323AB253296DE5BB0067F854 /* ItemsListView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				323AB2502967E1830067F854 /* HomeViewController.swift in Sources */,
+				323AB254296DE5BB0067F854 /* ItemsListView.swift in Sources */,
 				32A261EF296724BD00582809 /* AppDelegate.swift in Sources */,
 				32A261CF2967120D00582809 /* ContentView.swift in Sources */,
 				32A261CD2967120D00582809 /* firebase_auth_sampleApp.swift in Sources */,
