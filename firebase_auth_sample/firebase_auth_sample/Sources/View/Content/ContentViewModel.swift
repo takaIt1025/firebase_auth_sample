@@ -13,7 +13,8 @@ class ContentViewModel :ObservableObject{
     @Published var inputEmail: String = ""
     @Published var inputPassword: String = ""
     @Published var page : Int? = 0
-    func pushButton() {
+    
+    func pushSignUpButton() {
         Auth.auth().createUser(withEmail: self.inputEmail, password: self.inputPassword) { result, error in
             guard let user = result?.user else {
                 print("##登録エラー##")
@@ -29,6 +30,17 @@ class ContentViewModel :ObservableObject{
                     // TODO: 登録未完了の時、エラーを画面に表示
                     print("##登録エラー##コミットエラー")
                 }
+            }
+        }
+    }
+    func pushLoginButton() {
+        Auth.auth().signIn(withEmail: self.inputEmail, password: self.inputPassword) { result, error in
+            if result?.user != nil {
+                // ログイン成功処理
+                print("##ログイン成功")
+                self.page = 1
+            } else {
+                print("##ログインエラー")
             }
         }
     }

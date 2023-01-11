@@ -28,19 +28,33 @@ struct ContentView: View {
                 NavigationLink(destination: HomeViewController(),
                                tag: 1, selection: $viewModel.page) {
                 }
-                        Button(action: {
-                       print("##ユーザ登録処理")
-                            viewModel.pushButton()
-                        },
-                       label: {
-                           Text("ユーザ登録")
-                               .fontWeight(.medium)
-                               .frame(minWidth: 160)
-                               .foregroundColor(.white)
-                               .padding(12)
-                               .background(Color.accentColor)
-                               .cornerRadius(8)
-                       })
+                Button(action: {
+               print("##ユーザ登録処理")
+                    viewModel.pushSignUpButton()
+                },
+               label: {
+                   Text("ユーザ登録")
+                       .fontWeight(.medium)
+                       .frame(minWidth: 160)
+                       .foregroundColor(.white)
+                       .padding(12)
+                       .background(Color.accentColor)
+                       .cornerRadius(8)
+               })
+                
+                Button(action: {
+               print("##ユーザ登録処理")
+                    viewModel.pushLoginButton()
+                },
+               label: {
+                   Text("ログイン")
+                       .fontWeight(.medium)
+                       .frame(minWidth: 160)
+                       .foregroundColor(.white)
+                       .padding(12)
+                       .background(Color.accentColor)
+                       .cornerRadius(8)
+               })
             }
         }
     }
