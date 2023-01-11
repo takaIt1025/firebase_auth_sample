@@ -18,7 +18,7 @@ struct HomeViewController: View {
             ItemsListView().tabItem{
                 Text("tab1")
             }.tag(1)
-            Text("test1").tabItem{Text("tab2")}.tag(2)
+            AccountViewController().tabItem{Text("tab2")}.tag(2)
         }
     }
 }
