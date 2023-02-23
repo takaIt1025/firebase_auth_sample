@@ -29,8 +29,10 @@ struct ContentView: View {
                                tag: 1, selection: $viewModel.page) {
                 }
                 Button(action: {
-               print("##ユーザ登録処理")
-                    viewModel.pushSignUpButton()
+                    Task {
+                        print("##ユーザ登録処理")
+                        await viewModel.pushSignUpButton()
+                    }
                 },
                label: {
                    Text("ユーザ登録")
@@ -56,6 +58,8 @@ struct ContentView: View {
                        .cornerRadius(8)
                })
             }
+        }.alert(isPresented: $viewModel.isError){
+            Alert(title: Text("test"), message: Text($viewModel.errorMessage.wrappedValue), dismissButton: .default(Text("button"), action: {}))
         }
     }
 }

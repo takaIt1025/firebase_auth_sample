@@ -7,32 +7,51 @@
 
 import Foundation
 import FirebaseAuth
+import SwiftUI
 
 class ContentViewModel :ObservableObject{
     @Published var inputName: String = ""
     @Published var inputEmail: String = ""
     @Published var inputPassword: String = ""
     @Published var page : Int? = 0
+    @Published var isError: Bool = false
+    @Published var errorMessage: String = ""
     
-    func pushSignUpButton() {
-        Auth.auth().createUser(withEmail: self.inputEmail, password: self.inputPassword) { result, error in
-            guard let user = result?.user else {
-                print("##登録エラー##")
-                return
-            }
-            let request = user.createProfileChangeRequest()
-            request.displayName = self.inputName
-            request.commitChanges { error in
-                if error == nil {
-                    print("##登録完了")
-                    self.page = 1
-                } else {
-                    // TODO: 登録未完了の時、エラーを画面に表示
-                    print("##登録エラー##コミットエラー")
+    func pushSignUpButton() async {
+        Task {
+            do {
+                print("タスク開始")
+                let result  = try await AuthenticationRepositoryImpl().signUp(email: self.inputEmail, password: self.inputPassword, name: self.inputName)
+                if result.1 != nil {
+                    return DispatchQueue.main.async {
+                        print("errorです！！！！！！！！！！！！！")
+                        self.isError = true
+                        switch result.1 {
+                                case .networkError:
+                            self.errorMessage =  AuthError.networkError.title
+                                case .weakPassword:
+                            self.errorMessage =  AuthError.weakPassword.title
+                                case .wrongPassword:
+                            self.errorMessage =  AuthError.wrongPassword.title
+                                case .userNotFound:
+                            self.errorMessage =  AuthError.userNotFound.title
+                                default:
+                            self.errorMessage =  AuthError.unknown.title
+                                }
+                    }
                 }
+                return DispatchQueue.main.async {
+                    self.page = 1
+                }
+            } catch {
+
+                print("valueError")
+                return 
+
             }
         }
     }
+    
     func pushLoginButton() {
         Auth.auth().signIn(withEmail: self.inputEmail, password: self.inputPassword) { result, error in
             if result?.user != nil {
