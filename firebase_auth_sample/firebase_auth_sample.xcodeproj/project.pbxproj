@@ -14,6 +14,9 @@
 		323AB25C296F13E50067F854 /* AuthenticationControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB25B296F13E50067F854 /* AuthenticationControllerAPI.swift */; };
 		323AB25F296F14BE0067F854 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB25E296F14BE0067F854 /* AuthenticationRepository.swift */; };
 		323AB262296F17C30067F854 /* AuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB261296F17C30067F854 /* AuthenticationResult.swift */; };
+		323AB26429A9AD5B0067F854 /* example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB26329A9AD5B0067F854 /* example.swift */; };
+		323AB26629A9BEFE0067F854 /* Example2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB26529A9BEFE0067F854 /* Example2.swift */; };
+		323AB26829ABDAFC0067F854 /* Example3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AB26729ABDAFC0067F854 /* Example3.swift */; };
 		32A261BE2967120D00582809 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BD2967120D00582809 /* Tests_iOS.swift */; };
 		32A261C02967120D00582809 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BF2967120D00582809 /* Tests_iOSLaunchTests.swift */; };
 		32A261CA2967120D00582809 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261C92967120D00582809 /* Tests_macOS.swift */; };
@@ -59,6 +62,9 @@
 		323AB25B296F13E50067F854 /* AuthenticationControllerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationControllerAPI.swift; sourceTree = "<group>"; };
 		323AB25E296F14BE0067F854 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		323AB261296F17C30067F854 /* AuthenticationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResult.swift; sourceTree = "<group>"; };
+		323AB26329A9AD5B0067F854 /* example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = example.swift; sourceTree = "<group>"; };
+		323AB26529A9BEFE0067F854 /* Example2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2.swift; sourceTree = "<group>"; };
+		323AB26729ABDAFC0067F854 /* Example3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example3.swift; sourceTree = "<group>"; };
 		32A261A52967120500582809 /* firebase_auth_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebase_auth_sampleApp.swift; sourceTree = "<group>"; };
 		32A261A62967120500582809 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32A261A72967120D00582809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +135,9 @@
 				323AB24E2967E1530067F854 /* Home */,
 				323AB24D2967C5EB0067F854 /* Components */,
 				323AB24C2967C5CC0067F854 /* Content */,
+				323AB26329A9AD5B0067F854 /* example.swift */,
+				323AB26529A9BEFE0067F854 /* Example2.swift */,
+				323AB26729ABDAFC0067F854 /* Example3.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,12 +553,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323AB26829ABDAFC0067F854 /* Example3.swift in Sources */,
 				323AB262296F17C30067F854 /* AuthenticationResult.swift in Sources */,
 				323AB2502967E1830067F854 /* HomeViewController.swift in Sources */,
 				323AB254296DE5BB0067F854 /* ItemsListView.swift in Sources */,
+				323AB26429A9AD5B0067F854 /* example.swift in Sources */,
 				323AB258296F12390067F854 /* AccountViewController.swift in Sources */,
 				323AB25F296F14BE0067F854 /* AuthenticationRepository.swift in Sources */,
 				32A261EF296724BD00582809 /* AppDelegate.swift in Sources */,
+				323AB26629A9BEFE0067F854 /* Example2.swift in Sources */,
 				32A261CF2967120D00582809 /* ContentView.swift in Sources */,
 				32A261CD2967120D00582809 /* firebase_auth_sampleApp.swift in Sources */,
 				323AB25C296F13E50067F854 /* AuthenticationControllerAPI.swift in Sources */,
