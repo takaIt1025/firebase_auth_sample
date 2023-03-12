@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  LoginView.swift
 //  Shared
 //
 //  Created by Takaya Ito on 2023/01/05.
@@ -8,8 +8,8 @@
 import SwiftUI
 import FirebaseCore
 
-struct ContentView: View {
-    @ObservedObject var viewModel = ContentViewModel()
+struct LoginView: View {
+    @ObservedObject var viewModel = LoginViewModel()
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
@@ -68,6 +68,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginView()
     }
 }

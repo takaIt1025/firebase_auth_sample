@@ -15,7 +15,7 @@ struct firebase_auth_sampleApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

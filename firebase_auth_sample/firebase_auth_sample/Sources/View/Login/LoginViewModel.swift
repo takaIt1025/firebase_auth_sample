@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  LoginViewModel.swift
 //  firebase_auth_sample
 //
 //  Created by Takaya Ito on 2023/01/06.
@@ -9,7 +9,7 @@ import Foundation
 import FirebaseAuth
 import SwiftUI
 
-class ContentViewModel :ObservableObject{
+class LoginViewModel :ObservableObject{
     @Published var inputName: String = ""
     @Published var inputEmail: String = ""
     @Published var inputPassword: String = ""
