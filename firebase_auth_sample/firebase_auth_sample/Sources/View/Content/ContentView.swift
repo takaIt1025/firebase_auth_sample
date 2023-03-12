@@ -26,7 +26,7 @@ struct ContentView: View {
                 .frame(height: 200)
                 
                 NavigationLink(destination: HomeViewController(),
-                               tag: 1, selection: $viewModel.page) {
+                               tag: PageName.HomeView, selection: $viewModel.page) {
                 }
                 Button(action: {
                     Task {
@@ -45,8 +45,10 @@ struct ContentView: View {
                })
                 
                 Button(action: {
-               print("##ユーザ登録処理")
-                    viewModel.pushLoginButton()
+                    Task {
+                    print("##ユーザ登録処理")
+                    await viewModel.pushLoginButton()
+                    }
                 },
                label: {
                    Text("ログイン")
@@ -59,7 +61,7 @@ struct ContentView: View {
                })
             }
         }.alert(isPresented: $viewModel.isError){
-            Alert(title: Text("test"), message: Text($viewModel.errorMessage.wrappedValue), dismissButton: .default(Text("button"), action: {}))
+            Alert(title: Text("エラー"), message: Text(LocalizedStringKey($viewModel.errorMessage.wrappedValue)), dismissButton: .default(Text("閉じる"), action: {}))
         }
     }
 }
