@@ -13,9 +13,9 @@ import Firebase
 
 protocol FirebaseAuthDataSource {
     // ログイン
-    func signIn(email: String, password: String) async throws -> User
+    func signIn(email: String, password: String) async throws -> String
     // 新規登録
-    func signUp(email: String, password: String, name: String) async throws -> User
+    func signUp(email: String, password: String, name: String) async throws -> String
     // ログアウト
     func signOut() throws
     // 現在利用しているユーザ情報
@@ -29,10 +29,10 @@ struct FirebaseAuthDataSourceImpl:FirebaseAuthDataSource {
     
     let auth = Auth.auth()
     
-    func signIn(email: String, password: String) async throws -> User {
+    func signIn(email: String, password: String) async throws -> String {
         do {
             let authResult = try await auth.signIn(withEmail: email, password: password)
-            return User(authData: authResult.user)
+            return authResult.user.uid
         } catch let error as NSError {
             
 
@@ -52,14 +52,11 @@ struct FirebaseAuthDataSourceImpl:FirebaseAuthDataSource {
         }
     }
 
-    func signUp(email: String, password: String, name: String) async throws-> User {
+    func signUp(email: String, password: String, name: String) async throws-> String {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
-            var user = User(authData: result.user)
-            user.name = name
-            // メールアドレスとパスワードを利用して登録を完了させた後に、更新実行する必要あり
-            try await updateUser(user)
-            return user
+            let uid = result.user.uid
+            return uid
         } catch let error as NSError {
             //TODO: エラーの細かな分岐は今後追記、一旦ベタ書き。
             throw AuthError.signUpFailed(error: "登録できませんでした")

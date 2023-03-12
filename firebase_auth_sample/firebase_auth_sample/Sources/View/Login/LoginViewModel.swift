@@ -20,8 +20,9 @@ class LoginViewModel :ObservableObject{
     func pushSignUpButton() async {
         Task { () -> Void in
             do {
-                print("タスク開始")
-                let result  = try await AuthenticationRepositoryImpl().signUp(email: self.inputEmail, password: self.inputPassword, name: self.inputName)
+                let userId  = try await AuthenticationRepositoryImpl().signUp(email: self.inputEmail, password: self.inputPassword, name: self.inputName)
+                
+                try await UserRepositoryImpl().saveUserInfo(uid: userId, name: self.inputName , email: self.inputEmail, selfIntroduction: nil)
                 
                 return DispatchQueue.main.async {
                     self.page = PageName.HomeView
@@ -52,8 +53,10 @@ class LoginViewModel :ObservableObject{
                     self.isError = true
                 }
             } catch {
-                errorMessage = error.localizedDescription
-                self.isError = true
+                DispatchQueue.main.async {
+                    self.errorMessage = error.localizedDescription
+                    self.isError = true
+                }
             }
         }
     }

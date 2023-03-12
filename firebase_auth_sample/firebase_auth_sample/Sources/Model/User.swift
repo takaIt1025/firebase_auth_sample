@@ -9,17 +9,23 @@ import Foundation
 import FirebaseAuth
 
 class User: ObservableObject {
+    // ユーザーID
     let uid: String
-    @Published var name: String?
-    @Published var email: String?
+    // ユーザー名
+    let name: String
+    // メールアドレス
+    let email: String
+    // 写真
+    let photoURL: String?
+    // 紹介文
+    let selfIntroduction: String?
     
-    init(authData: FirebaseAuth.User) {
-        // ユーザID
-        self.uid = authData.uid
-        // ユーザ名
-        self.name = authData.displayName
-        // メールアドレス
-        self.email = authData.email
+    init(data: [String: Any]) {
+        self.uid = data["uid"] as? String ?? ""
+        self.name = data["name"] as? String ?? ""
+        self.email = data["email"] as? String ?? ""
+        self.photoURL = data["photoURL"] as? String
+        self.selfIntroduction = data["selfIntroduction"] as? String
     }
 }
 

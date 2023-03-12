@@ -10,9 +10,9 @@ import FirebaseAuth
 
 protocol AuthenticationRepository {
     // 新規登録
-    func signUp(email: String, password: String, name: String) async throws-> User
+    func signUp(email: String, password: String, name: String) async throws-> String
     // ログイン
-    func signIn(email: String, password: String) async throws -> User
+    func signIn(email: String, password: String) async throws -> String
     // ログアウト
     func signOut() throws
 }
@@ -22,7 +22,7 @@ class AuthenticationRepositoryImpl : AuthenticationRepository{
         // TODO: 今後実装
     }
     
-    func signIn(email: String, password: String) async throws -> User{
+    func signIn(email: String, password: String) async throws -> String{
         do {
            return  try await FirebaseAuthDataSourceImpl().signIn(email: email, password: password)
         } catch {
@@ -30,7 +30,7 @@ class AuthenticationRepositoryImpl : AuthenticationRepository{
         }
     }
     
-    func signUp(email: String, password: String, name: String) async throws -> User{
+    func signUp(email: String, password: String, name: String) async throws -> String{
         
         do {
             return try await FirebaseAuthDataSourceImpl().signUp(email: email, password: password, name: name)
