@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import FirebaseFirestore
 
 struct HomeViewController: View {
 //    var viewModel = ContentViewModel()
@@ -17,8 +18,8 @@ struct HomeViewController: View {
         TabView(selection: $selectTag) {
             ItemsListView().tabItem{
                 Text("tab1")
-            }.tag(1)
-            AccountViewController().tabItem{Text("tab2")}.tag(2)
+            }.tag(PageName.ItemsListView)
+            AccountViewController().tabItem{Text("tab2")}.tag(PageName.AccountView)
         }
     }
 }

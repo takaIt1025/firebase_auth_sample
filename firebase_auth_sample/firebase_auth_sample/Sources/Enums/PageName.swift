@@ -8,4 +8,6 @@
 import Foundation
 enum PageName {
     case HomeView
+    case ItemsListView
+    case AccountView
 }
