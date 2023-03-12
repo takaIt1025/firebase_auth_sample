@@ -11,7 +11,7 @@ protocol UserRepository {
     // ユーザー情報登録
     func saveUserInfo(uid: String, name: String?, email: String?, selfIntroduction: String?) async throws
     // ユーザー情報更新
-    func updateUserInfo(uid: String, name: String, email: String, selfIntroduction: String?) async throws
+    func updateUserInfo(uid: String, name: String?, email: String?, selfIntroduction: String?) async throws
     // ユーザー情報取得
 //    func getUserInfo(uid: String) async throws -> User?
 }
@@ -29,7 +29,7 @@ class UserRepositoryImpl: UserRepository {
         }
     }
     
-    func updateUserInfo(uid: String, name: String, email: String, selfIntroduction: String?) async throws {
+    func updateUserInfo(uid: String, name: String?, email: String?, selfIntroduction: String?) async throws {
         do{
             try await UserDataSourceImpl().updateUserInfo(uid: uid, name: name, email: email, selfIntroduction: selfIntroduction)
         } catch {
@@ -37,12 +37,12 @@ class UserRepositoryImpl: UserRepository {
         }
     }
     
-    func getUserInfo(uid: String) async throws -> User? {
+    func getUserInfo(uid: String) async throws -> UserInfo? {
         let snapshot = try await userCollectionRef.document(uid).getDocument()
         guard let data = snapshot.data() else {
             return nil
         }
-        let user = User(data: data)
+        let user = UserInfo(data: data)
         return user
     }
 }

@@ -23,11 +23,12 @@ protocol FirebaseAuthDataSource {
 }
 
 struct FirebaseAuthDataSourceImpl:FirebaseAuthDataSource {
-    
-    var currentUser: User?
-    
-    
+
     let auth = Auth.auth()
+    
+    var currentUser: User? {
+        auth.currentUser
+    }
     
     func signIn(email: String, password: String) async throws -> String {
         do {
@@ -63,7 +64,7 @@ struct FirebaseAuthDataSourceImpl:FirebaseAuthDataSource {
         }
     }
     
-    private func updateUser(_ user: User) async throws {
+    private func updateUser(_ user: UserInfo) async throws {
         let changeRequest = auth.currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = user.name
         do {

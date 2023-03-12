@@ -38,4 +38,7 @@ class AuthenticationRepositoryImpl : AuthenticationRepository{
             throw error
         }
     }
+    func getCurrentUser() -> User?{
+        FirebaseAuthDataSourceImpl().currentUser
+    }
 }

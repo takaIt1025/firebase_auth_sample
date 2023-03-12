@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseAuth
 
-class User: ObservableObject {
+class UserInfo: ObservableObject {
     // ユーザーID
     let uid: String
     // ユーザー名

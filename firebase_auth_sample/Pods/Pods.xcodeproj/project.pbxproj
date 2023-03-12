@@ -1068,7 +1068,7 @@
 		0D8746F00FA79AE614D0D7002EEA9AF4 /* FIRResetPasswordRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRResetPasswordRequest.m; path = FirebaseAuth/Sources/Backend/RPC/FIRResetPasswordRequest.m; sourceTree = "<group>"; };
 		0DC5F202B676790B54CE0278E0E28CAD /* FIRVerifyCustomTokenResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRVerifyCustomTokenResponse.m; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyCustomTokenResponse.m; sourceTree = "<group>"; };
 		0E2D6C47D605A35A10DADE2644BC8440 /* GTMSessionFetcher-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMSessionFetcher-macOS-umbrella.h"; path = "../GTMSessionFetcher-macOS/GTMSessionFetcher-macOS-umbrella.h"; sourceTree = "<group>"; };
-		0ED864E83E9E4D9F726C965924AC4F0E /* FirebaseAuth-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "FirebaseAuth-iOS"; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ED864E83E9E4D9F726C965924AC4F0E /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE652B24E0C729638BCF0D3DB40AAA4 /* FBLPromise+Always.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Always.h"; path = "Sources/FBLPromises/include/FBLPromise+Always.h"; sourceTree = "<group>"; };
 		0EE7209ACB7B6F91452F5EA450AB3DF1 /* NSData+FIRBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+FIRBase64.h"; path = "FirebaseAuth/Sources/Utilities/NSData+FIRBase64.h"; sourceTree = "<group>"; };
 		10AD53115B774890B41F2AD117AF12C3 /* FBLPromise+Delay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Delay.h"; path = "Sources/FBLPromises/include/FBLPromise+Delay.h"; sourceTree = "<group>"; };
@@ -1148,7 +1148,7 @@
 		318555516FEA17D421E7E2DFD8A3F960 /* FIROptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIROptions.m; path = FirebaseCore/Sources/FIROptions.m; sourceTree = "<group>"; };
 		3202C89354582FCD9602B9E051CAAC92 /* GoogleUtilities-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleUtilities-iOS-Info.plist"; sourceTree = "<group>"; };
 		327CA0EF83CC7B0FF9D677F2E5612B7B /* GULAppEnvironmentUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppEnvironmentUtil.m; path = GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.m; sourceTree = "<group>"; };
-		32BE9EA17D90958274B1F9C577FC310A /* GoogleUtilities-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "GoogleUtilities-macOS"; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32BE9EA17D90958274B1F9C577FC310A /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33872F007BD068ECB2CC1C70A8032BE1 /* FIRTwitterAuthCredential.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRTwitterAuthCredential.m; path = FirebaseAuth/Sources/AuthProvider/Twitter/FIRTwitterAuthCredential.m; sourceTree = "<group>"; };
 		344274BB82C315F4B7E51ECD39C2F8B1 /* FBLPromise+Recover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Recover.m"; path = "Sources/FBLPromises/FBLPromise+Recover.m"; sourceTree = "<group>"; };
 		3462A4A0885C1EE2DC517D157318286F /* FBLPromise+Always.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Always.m"; path = "Sources/FBLPromises/FBLPromise+Always.m"; sourceTree = "<group>"; };
@@ -1171,11 +1171,11 @@
 		3C0AEE0982A8357CD89980132F3021FB /* GULKeychainUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULKeychainUtils.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainUtils.h; sourceTree = "<group>"; };
 		3C5B68D7D631AE0BBDE059105732EDD5 /* FIRSecureTokenService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRSecureTokenService.m; path = FirebaseAuth/Sources/SystemService/FIRSecureTokenService.m; sourceTree = "<group>"; };
 		3CE8FA9E5770CA5E4283BFCEC3297AAC /* HeartbeatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeartbeatController.swift; path = FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatController.swift; sourceTree = "<group>"; };
-		3CEB3E0830160855D74E6F5BF9B8FEF2 /* FirebaseCore-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "FirebaseCore-macOS"; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CEB3E0830160855D74E6F5BF9B8FEF2 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBC3120837BECA7119CE90DEE2FA63F /* GULHeartbeatDateStorageUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULHeartbeatDateStorageUserDefaults.m; path = GoogleUtilities/Environment/GULHeartbeatDateStorageUserDefaults.m; sourceTree = "<group>"; };
 		3EDA242D699C4EB460730841B7BE0F7A /* FirebaseCoreInternal-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "FirebaseCoreInternal-macOS.modulemap"; path = "../FirebaseCoreInternal-macOS/FirebaseCoreInternal-macOS.modulemap"; sourceTree = "<group>"; };
-		3F1066E3BE2FF4EB16D21D26F353EEC3 /* FirebaseCoreInternal-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "FirebaseCoreInternal-iOS"; path = FirebaseCoreInternal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F6FA4266583C4F06B671F3C9F70D8AF /* PromisesObjC-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "PromisesObjC-macOS"; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1066E3BE2FF4EB16D21D26F353EEC3 /* FirebaseCoreInternal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCoreInternal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F6FA4266583C4F06B671F3C9F70D8AF /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCBF2B80B1B46F110B1EEA45DA1C967 /* FIRSignInWithGameCenterRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRSignInWithGameCenterRequest.m; path = FirebaseAuth/Sources/Backend/RPC/FIRSignInWithGameCenterRequest.m; sourceTree = "<group>"; };
 		3FE8932A9C707CB62CE3176AE690D161 /* FIRAuthTokenResult_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthTokenResult_Internal.h; path = FirebaseAuth/Sources/Auth/FIRAuthTokenResult_Internal.h; sourceTree = "<group>"; };
 		410D6270728C60951E51E727BEC2D2F3 /* FIRTwitterAuthProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRTwitterAuthProvider.m; path = FirebaseAuth/Sources/AuthProvider/Twitter/FIRTwitterAuthProvider.m; sourceTree = "<group>"; };
@@ -1190,7 +1190,7 @@
 		47D9FD41FD3CD995918C0A1972548600 /* FIROptionsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptionsInternal.h; path = FirebaseCore/Extension/FIROptionsInternal.h; sourceTree = "<group>"; };
 		47FD9B1356DC543FF57A886B3912679D /* FIRAuthSerialTaskQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthSerialTaskQueue.m; path = FirebaseAuth/Sources/Auth/FIRAuthSerialTaskQueue.m; sourceTree = "<group>"; };
 		480CB1AAFA66A2C212E7E8EE946F6D85 /* FIRAdditionalUserInfo_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAdditionalUserInfo_Internal.h; path = FirebaseAuth/Sources/User/FIRAdditionalUserInfo_Internal.h; sourceTree = "<group>"; };
-		48418FE93EED53DB98C794AC81EBA74B /* GTMSessionFetcher-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "GTMSessionFetcher-iOS"; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48418FE93EED53DB98C794AC81EBA74B /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		485E591F12D2B0CD413B2DA3ABFA93A7 /* PromisesObjC-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "PromisesObjC-macOS.release.xcconfig"; path = "../PromisesObjC-macOS/PromisesObjC-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		486A3FE0B983F1E285EE555BAF29F0FD /* FBLPromise+Validate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Validate.h"; path = "Sources/FBLPromises/include/FBLPromise+Validate.h"; sourceTree = "<group>"; };
 		48FF8FECE265B01B5CAA228963E27D14 /* FIRGameCenterAuthProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRGameCenterAuthProvider.m; path = FirebaseAuth/Sources/AuthProvider/GameCenter/FIRGameCenterAuthProvider.m; sourceTree = "<group>"; };
@@ -1255,7 +1255,7 @@
 		6860FF2D09962BF9275640354C5655D4 /* FBLPromise+Any.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Any.h"; path = "Sources/FBLPromises/include/FBLPromise+Any.h"; sourceTree = "<group>"; };
 		68D90C22EEF50CDC18EACA6F02C055EC /* FIRAuthBackend.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthBackend.m; path = FirebaseAuth/Sources/Backend/FIRAuthBackend.m; sourceTree = "<group>"; };
 		69483F3386AF3788395656693153F781 /* FBLPromise+Catch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Catch.m"; path = "Sources/FBLPromises/FBLPromise+Catch.m"; sourceTree = "<group>"; };
-		696EA2D48C1545E3648647680E31B4A0 /* GTMSessionFetcher-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "GTMSessionFetcher-macOS"; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		696EA2D48C1545E3648647680E31B4A0 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		697172B122922132A9DEF2D92C854318 /* GULNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULNSData+zlib.h"; path = "GoogleUtilities/NSData+zlib/Public/GoogleUtilities/GULNSData+zlib.h"; sourceTree = "<group>"; };
 		6AAA45C11DA3166A460B8B4E38E21E94 /* Heartbeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Heartbeat.swift; path = FirebaseCore/Internal/Sources/HeartbeatLogging/Heartbeat.swift; sourceTree = "<group>"; };
 		6B49C2893C97EF37196F8888DE864103 /* FirebaseCoreInternal-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "FirebaseCoreInternal-iOS.modulemap"; sourceTree = "<group>"; };
@@ -1268,7 +1268,7 @@
 		6E7DB7999EFF2412C515DFB1C66A45F7 /* FirebaseAuth-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "FirebaseAuth-macOS.modulemap"; path = "../FirebaseAuth-macOS/FirebaseAuth-macOS.modulemap"; sourceTree = "<group>"; };
 		6F1A145BE66CCA5D48FCE834585EC60C /* FIRAuthAPNSTokenManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthAPNSTokenManager.m; path = FirebaseAuth/Sources/SystemService/FIRAuthAPNSTokenManager.m; sourceTree = "<group>"; };
 		6F47CAA440390D62DC4207D4081C23C7 /* FIRComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponent.h; path = FirebaseCore/Extension/FIRComponent.h; sourceTree = "<group>"; };
-		70179CF22283A1F167B8852634DE1A49 /* GoogleUtilities-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "GoogleUtilities-iOS"; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70179CF22283A1F167B8852634DE1A49 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		714832F5B036BCCBD9D32EEE4E6251EC /* FIRGetOOBConfirmationCodeResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRGetOOBConfirmationCodeResponse.h; path = FirebaseAuth/Sources/Backend/RPC/FIRGetOOBConfirmationCodeResponse.h; sourceTree = "<group>"; };
 		71556649946CE8165E1B811B1940648D /* FBLPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBLPromise.m; path = Sources/FBLPromises/FBLPromise.m; sourceTree = "<group>"; };
 		72062E7A1AD45DB082EA91C220387C8B /* FBLPromiseError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromiseError.h; path = Sources/FBLPromises/include/FBLPromiseError.h; sourceTree = "<group>"; };
@@ -1309,7 +1309,7 @@
 		85026697E12D4F019DABD4C0752963CF /* FIRPhoneAuthCredential.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRPhoneAuthCredential.m; path = FirebaseAuth/Sources/AuthProvider/Phone/FIRPhoneAuthCredential.m; sourceTree = "<group>"; };
 		85F4FE128B479B9DE9881D3B8241418B /* FIRMultiFactorResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMultiFactorResolver.m; path = FirebaseAuth/Sources/MultiFactor/FIRMultiFactorResolver.m; sourceTree = "<group>"; };
 		866B3A87115C70FA29C538A6129C8735 /* FIRFinalizeMFAEnrollmentResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFinalizeMFAEnrollmentResponse.h; path = FirebaseAuth/Sources/Backend/RPC/MultiFactor/Enroll/FIRFinalizeMFAEnrollmentResponse.h; sourceTree = "<group>"; };
-		8717E6733922093A540C6E3215FC8541 /* Pods-firebase_auth_sample (macOS) */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-firebase_auth_sample (macOS)"; path = Pods_firebase_auth_sample__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8717E6733922093A540C6E3215FC8541 /* Pods_firebase_auth_sample__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firebase_auth_sample__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CC89B67F6FDF9292A3C08FFA444596 /* Pods-firebase_auth_sample (macOS).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-firebase_auth_sample (macOS).modulemap"; sourceTree = "<group>"; };
 		8818F88D4C2A5901148AB0C430B54B84 /* FIRComponentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentType.h; path = FirebaseCore/Extension/FIRComponentType.h; sourceTree = "<group>"; };
 		882A01DB703638FCF223E24DB7E24FDA /* FIRMultiFactor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMultiFactor.m; path = FirebaseAuth/Sources/MultiFactor/FIRMultiFactor.m; sourceTree = "<group>"; };
@@ -1349,7 +1349,7 @@
 		9C7B57EBE978EDB07B4F25E8D2149970 /* PromisesObjC-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromisesObjC-iOS-umbrella.h"; sourceTree = "<group>"; };
 		9C89CA333819470C9F8BA51486432E8E /* FirebaseCoreInternal-macOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "FirebaseCoreInternal-macOS-Info.plist"; path = "../FirebaseCoreInternal-macOS/FirebaseCoreInternal-macOS-Info.plist"; sourceTree = "<group>"; };
 		9CB97907272472D2A5B85E10E11FD238 /* FIREmailPasswordAuthCredential.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIREmailPasswordAuthCredential.m; path = FirebaseAuth/Sources/AuthProvider/Email/FIREmailPasswordAuthCredential.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F6DBA5FBB5297D6747E6447537E22C8 /* HeartbeatsBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeartbeatsBundle.swift; path = FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsBundle.swift; sourceTree = "<group>"; };
 		9F9E508296ADF726C674F1E0D6D8F5E0 /* FirebaseCoreInternal-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseCoreInternal-iOS-prefix.pch"; sourceTree = "<group>"; };
 		A0457C7C607C7DB96DAAB615BF722211 /* FIRFacebookAuthProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFacebookAuthProvider.h; path = FirebaseAuth/Sources/Public/FirebaseAuth/FIRFacebookAuthProvider.h; sourceTree = "<group>"; };
@@ -1426,7 +1426,7 @@
 		C13BE29DE15917E2502397366A0F1A99 /* FIRAuthWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthWebView.m; path = FirebaseAuth/Sources/Utilities/FIRAuthWebView.m; sourceTree = "<group>"; };
 		C14D08224D07CE8E1C87D1F6749B8630 /* GULSecureCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSecureCoding.m; path = GoogleUtilities/Environment/GULSecureCoding.m; sourceTree = "<group>"; };
 		C1590D00DF6789D60C734F26424FD41B /* GTMSessionFetcher-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "GTMSessionFetcher-macOS.debug.xcconfig"; path = "../GTMSessionFetcher-macOS/GTMSessionFetcher-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C192B091C2549A4D3D94E9FACCF9586A /* PromisesObjC-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "PromisesObjC-iOS"; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C192B091C2549A4D3D94E9FACCF9586A /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CF0F65800EA1F9B5EE0BAB94382C14 /* GULAppDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULAppDelegateSwizzler_Private.h; sourceTree = "<group>"; };
 		C1DF2C621C5F798A817D4A060B069984 /* FIRAuth_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuth_Internal.h; path = FirebaseAuth/Sources/Auth/FIRAuth_Internal.h; sourceTree = "<group>"; };
 		C2BB1E904C378222D2526973AE400613 /* FBLPromise+Validate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Validate.m"; path = "Sources/FBLPromises/FBLPromise+Validate.m"; sourceTree = "<group>"; };
@@ -1457,7 +1457,7 @@
 		CDCD1E563CE01BECF2C6F24D2811F56A /* FIRSendVerificationCodeResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRSendVerificationCodeResponse.h; path = FirebaseAuth/Sources/Backend/RPC/FIRSendVerificationCodeResponse.h; sourceTree = "<group>"; };
 		CDFFE773CC3C6A6EED1C232CB1C35FAF /* PromisesObjC-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PromisesObjC-iOS-Info.plist"; sourceTree = "<group>"; };
 		CE49A0BCA85B1A2C15AC57BC9F6CEAC5 /* FIRUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRUser.m; path = FirebaseAuth/Sources/User/FIRUser.m; sourceTree = "<group>"; };
-		CEE5D73780E54C666EFDE06BBA166E99 /* FirebaseCoreInternal-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "FirebaseCoreInternal-macOS"; path = FirebaseCoreInternal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE5D73780E54C666EFDE06BBA166E99 /* FirebaseCoreInternal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCoreInternal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA84F7EE1434C0571A1E78292FF98DC /* FIRFinalizeMFASignInResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFinalizeMFASignInResponse.h; path = FirebaseAuth/Sources/Backend/RPC/MultiFactor/SignIn/FIRFinalizeMFASignInResponse.h; sourceTree = "<group>"; };
 		CFF2B7435D7069C3CCAD5EA7376C4B70 /* FIRAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuth.h; path = FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuth.h; sourceTree = "<group>"; };
 		D0496F5D4B79FDFF38E01B2233889D0F /* FirebaseAuth-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseAuth-iOS-umbrella.h"; sourceTree = "<group>"; };
@@ -1466,7 +1466,7 @@
 		D3C09ABDCA194F6273A111E10DB5CD2A /* FIRFederatedAuthProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFederatedAuthProvider.h; path = FirebaseAuth/Sources/Public/FirebaseAuth/FIRFederatedAuthProvider.h; sourceTree = "<group>"; };
 		D3C18B1E49A7470CD939CBD9DCACFE65 /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Sources/Core/Public/GTMSessionFetcher/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
 		D4384B3FB22E9D5313D5CB71899D9712 /* FirebaseCoreInternal-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FirebaseCoreInternal-iOS-Info.plist"; sourceTree = "<group>"; };
-		D5141A7A01B7140EFE0BE63BDAC8684A /* FirebaseCore-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "FirebaseCore-iOS"; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5141A7A01B7140EFE0BE63BDAC8684A /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D514FA8E3E0D4A50D9022F8B8F357344 /* FIRPhoneAuthCredential.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRPhoneAuthCredential.h; path = FirebaseAuth/Sources/Public/FirebaseAuth/FIRPhoneAuthCredential.h; sourceTree = "<group>"; };
 		D6471A7B38370D423AB9FE2C36CCEAE8 /* FIRVerifyPhoneNumberRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRVerifyPhoneNumberRequest.m; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyPhoneNumberRequest.m; sourceTree = "<group>"; };
 		D67519D9252B846F4F302C457E1081DE /* GULMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULMutableDictionary.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULMutableDictionary.h; sourceTree = "<group>"; };
@@ -1488,7 +1488,7 @@
 		E0A04F6D01D26C0F94C38A3BBE13D5A9 /* FIRPhoneMultiFactorAssertion+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRPhoneMultiFactorAssertion+Internal.h"; path = "FirebaseAuth/Sources/MultiFactor/Phone/FIRPhoneMultiFactorAssertion+Internal.h"; sourceTree = "<group>"; };
 		E11D33C2E4C5ED0C627E37141E9560B5 /* FIRLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLibrary.h; path = FirebaseCore/Extension/FIRLibrary.h; sourceTree = "<group>"; };
 		E1A7413F825F5888EE6D3021A80C8B7A /* FBLPromise+Await.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Await.h"; path = "Sources/FBLPromises/include/FBLPromise+Await.h"; sourceTree = "<group>"; };
-		E2619F9A7CA4E2A508437E9C3EC77ABE /* FirebaseAuth-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "FirebaseAuth-macOS"; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2619F9A7CA4E2A508437E9C3EC77ABE /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33E95EE634F50A1636F7E47A8D5B3DC /* GULNetworkInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkInfo.m; path = GoogleUtilities/Environment/NetworkInfo/GULNetworkInfo.m; sourceTree = "<group>"; };
 		E3C52F7C440C8A79DE30D1592525D547 /* FirebaseAuth-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "FirebaseAuth-macOS.release.xcconfig"; path = "../FirebaseAuth-macOS/FirebaseAuth-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		E3ED033A00144C473503FE5E5DA01D32 /* FBLPromise+All.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+All.m"; path = "Sources/FBLPromises/FBLPromise+All.m"; sourceTree = "<group>"; };
@@ -1780,7 +1780,6 @@
 				30227F7ED4399B244EA90ACF4ACB2127 /* FBLPromises.h */,
 				F311CC8BA2690230CBE010087FADC23F /* Support Files */,
 			);
-			name = PromisesObjC;
 			path = PromisesObjC;
 			sourceTree = "<group>";
 		};
@@ -1820,20 +1819,20 @@
 		57E74577A9872B4F2B1CB25EFAAAA5C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0ED864E83E9E4D9F726C965924AC4F0E /* FirebaseAuth-iOS */,
-				E2619F9A7CA4E2A508437E9C3EC77ABE /* FirebaseAuth-macOS */,
-				D5141A7A01B7140EFE0BE63BDAC8684A /* FirebaseCore-iOS */,
-				3CEB3E0830160855D74E6F5BF9B8FEF2 /* FirebaseCore-macOS */,
-				3F1066E3BE2FF4EB16D21D26F353EEC3 /* FirebaseCoreInternal-iOS */,
-				CEE5D73780E54C666EFDE06BBA166E99 /* FirebaseCoreInternal-macOS */,
-				70179CF22283A1F167B8852634DE1A49 /* GoogleUtilities-iOS */,
-				32BE9EA17D90958274B1F9C577FC310A /* GoogleUtilities-macOS */,
-				48418FE93EED53DB98C794AC81EBA74B /* GTMSessionFetcher-iOS */,
-				696EA2D48C1545E3648647680E31B4A0 /* GTMSessionFetcher-macOS */,
+				0ED864E83E9E4D9F726C965924AC4F0E /* FirebaseAuth.framework */,
+				E2619F9A7CA4E2A508437E9C3EC77ABE /* FirebaseAuth.framework */,
+				D5141A7A01B7140EFE0BE63BDAC8684A /* FirebaseCore.framework */,
+				3CEB3E0830160855D74E6F5BF9B8FEF2 /* FirebaseCore.framework */,
+				3F1066E3BE2FF4EB16D21D26F353EEC3 /* FirebaseCoreInternal.framework */,
+				CEE5D73780E54C666EFDE06BBA166E99 /* FirebaseCoreInternal.framework */,
+				70179CF22283A1F167B8852634DE1A49 /* GoogleUtilities.framework */,
+				32BE9EA17D90958274B1F9C577FC310A /* GoogleUtilities.framework */,
+				48418FE93EED53DB98C794AC81EBA74B /* GTMSessionFetcher.framework */,
+				696EA2D48C1545E3648647680E31B4A0 /* GTMSessionFetcher.framework */,
 				DD8CD977CD865760A6B0CE6A4F6952BC /* Pods-firebase_auth_sample (iOS) */,
-				8717E6733922093A540C6E3215FC8541 /* Pods-firebase_auth_sample (macOS) */,
-				C192B091C2549A4D3D94E9FACCF9586A /* PromisesObjC-iOS */,
-				3F6FA4266583C4F06B671F3C9F70D8AF /* PromisesObjC-macOS */,
+				8717E6733922093A540C6E3215FC8541 /* Pods_firebase_auth_sample__macOS_.framework */,
+				C192B091C2549A4D3D94E9FACCF9586A /* FBLPromises.framework */,
+				3F6FA4266583C4F06B671F3C9F70D8AF /* FBLPromises.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1854,7 +1853,6 @@
 				F205AFBD66A6D0834E74E144402935FA /* WeakContainer.swift */,
 				074359D4AC9475858A6F2E3D4B4B597E /* Support Files */,
 			);
-			name = FirebaseCoreInternal;
 			path = FirebaseCoreInternal;
 			sourceTree = "<group>";
 		};
@@ -1909,7 +1907,6 @@
 				7B49EDC936E2CCA0A7C62A043A33A5F0 /* FIRVersion.m */,
 				8E2D164FC28968A88BB8E1403C5C9504 /* Support Files */,
 			);
-			name = FirebaseCore;
 			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
@@ -2172,7 +2169,6 @@
 				98E5FE6C5F26378408652E4A4EF8ED45 /* NSData+FIRBase64.m */,
 				8B697F11B7B1F861880FF4C219D3FAEB /* Support Files */,
 			);
-			name = FirebaseAuth;
 			path = FirebaseAuth;
 			sourceTree = "<group>";
 		};
@@ -2364,7 +2360,6 @@
 				CBC03268BDFA3A6B5022963D82B116A2 /* Reachability */,
 				9931316DD4257236FC80274932555367 /* Support Files */,
 			);
-			name = GoogleUtilities;
 			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
@@ -2412,7 +2407,6 @@
 				37428ECBEB246DD80E8C371576B2D050 /* Core */,
 				009ADE155C5319B215A793B4531DE560 /* Support Files */,
 			);
-			name = GTMSessionFetcher;
 			path = GTMSessionFetcher;
 			sourceTree = "<group>";
 		};
@@ -3007,7 +3001,7 @@
 			);
 			name = "FirebaseAuth-iOS";
 			productName = FirebaseAuth;
-			productReference = 0ED864E83E9E4D9F726C965924AC4F0E /* FirebaseAuth-iOS */;
+			productReference = 0ED864E83E9E4D9F726C965924AC4F0E /* FirebaseAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		080E2A2D1CB72A16D1C8CA237DE99824 /* GoogleUtilities-macOS */ = {
@@ -3026,7 +3020,7 @@
 			);
 			name = "GoogleUtilities-macOS";
 			productName = GoogleUtilities;
-			productReference = 32BE9EA17D90958274B1F9C577FC310A /* GoogleUtilities-macOS */;
+			productReference = 32BE9EA17D90958274B1F9C577FC310A /* GoogleUtilities.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		083BF4399888DABAA10E867CAC0B404E /* FirebaseCoreInternal-iOS */ = {
@@ -3045,7 +3039,7 @@
 			);
 			name = "FirebaseCoreInternal-iOS";
 			productName = FirebaseCoreInternal;
-			productReference = 3F1066E3BE2FF4EB16D21D26F353EEC3 /* FirebaseCoreInternal-iOS */;
+			productReference = 3F1066E3BE2FF4EB16D21D26F353EEC3 /* FirebaseCoreInternal.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0F9C4218D1322D6519F08E0D5EE08410 /* PromisesObjC-macOS */ = {
@@ -3063,7 +3057,7 @@
 			);
 			name = "PromisesObjC-macOS";
 			productName = FBLPromises;
-			productReference = 3F6FA4266583C4F06B671F3C9F70D8AF /* PromisesObjC-macOS */;
+			productReference = 3F6FA4266583C4F06B671F3C9F70D8AF /* FBLPromises.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		25A6B97521854FB1A8DB5E2A269B7126 /* GTMSessionFetcher-iOS */ = {
@@ -3081,7 +3075,7 @@
 			);
 			name = "GTMSessionFetcher-iOS";
 			productName = GTMSessionFetcher;
-			productReference = 48418FE93EED53DB98C794AC81EBA74B /* GTMSessionFetcher-iOS */;
+			productReference = 48418FE93EED53DB98C794AC81EBA74B /* GTMSessionFetcher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3370D7A2CE2F9A2E726B25579BAD8161 /* GoogleUtilities-iOS */ = {
@@ -3100,7 +3094,7 @@
 			);
 			name = "GoogleUtilities-iOS";
 			productName = GoogleUtilities;
-			productReference = 70179CF22283A1F167B8852634DE1A49 /* GoogleUtilities-iOS */;
+			productReference = 70179CF22283A1F167B8852634DE1A49 /* GoogleUtilities.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7BB8B4F1475DE0E8C266435D76B74586 /* FirebaseAuth-macOS */ = {
@@ -3121,7 +3115,7 @@
 			);
 			name = "FirebaseAuth-macOS";
 			productName = FirebaseAuth;
-			productReference = E2619F9A7CA4E2A508437E9C3EC77ABE /* FirebaseAuth-macOS */;
+			productReference = E2619F9A7CA4E2A508437E9C3EC77ABE /* FirebaseAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7DE909B84FB651B0CF6D29691665DB2F /* GTMSessionFetcher-macOS */ = {
@@ -3139,7 +3133,7 @@
 			);
 			name = "GTMSessionFetcher-macOS";
 			productName = GTMSessionFetcher;
-			productReference = 696EA2D48C1545E3648647680E31B4A0 /* GTMSessionFetcher-macOS */;
+			productReference = 696EA2D48C1545E3648647680E31B4A0 /* GTMSessionFetcher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8575441ACDDE97B55889D7E19C95CD58 /* Pods-firebase_auth_sample (macOS) */ = {
@@ -3163,7 +3157,7 @@
 			);
 			name = "Pods-firebase_auth_sample (macOS)";
 			productName = Pods_firebase_auth_sample__macOS_;
-			productReference = 8717E6733922093A540C6E3215FC8541 /* Pods-firebase_auth_sample (macOS) */;
+			productReference = 8717E6733922093A540C6E3215FC8541 /* Pods_firebase_auth_sample__macOS_.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		93CC6EF6857A8A019B34C4F3CB679E52 /* FirebaseCore-iOS */ = {
@@ -3183,7 +3177,7 @@
 			);
 			name = "FirebaseCore-iOS";
 			productName = FirebaseCore;
-			productReference = D5141A7A01B7140EFE0BE63BDAC8684A /* FirebaseCore-iOS */;
+			productReference = D5141A7A01B7140EFE0BE63BDAC8684A /* FirebaseCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9D3FD0E70ED925902AC63E159543867D /* FirebaseCoreInternal-macOS */ = {
@@ -3202,7 +3196,7 @@
 			);
 			name = "FirebaseCoreInternal-macOS";
 			productName = FirebaseCoreInternal;
-			productReference = CEE5D73780E54C666EFDE06BBA166E99 /* FirebaseCoreInternal-macOS */;
+			productReference = CEE5D73780E54C666EFDE06BBA166E99 /* FirebaseCoreInternal.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A0A1F7F45D55EB0C71473FEE5F888393 /* FirebaseCore-macOS */ = {
@@ -3222,7 +3216,7 @@
 			);
 			name = "FirebaseCore-macOS";
 			productName = FirebaseCore;
-			productReference = 3CEB3E0830160855D74E6F5BF9B8FEF2 /* FirebaseCore-macOS */;
+			productReference = 3CEB3E0830160855D74E6F5BF9B8FEF2 /* FirebaseCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C0605A379C0220D340A4FC1875F3C692 /* PromisesObjC-iOS */ = {
@@ -3240,7 +3234,7 @@
 			);
 			name = "PromisesObjC-iOS";
 			productName = FBLPromises;
-			productReference = C192B091C2549A4D3D94E9FACCF9586A /* PromisesObjC-iOS */;
+			productReference = C192B091C2549A4D3D94E9FACCF9586A /* FBLPromises.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D5C5AAA17301F4F79812C4A54B6D796B /* Pods-firebase_auth_sample (iOS) */ = {
@@ -3274,7 +3268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1340;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -4035,7 +4029,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3C52F7C440C8A79DE30D1592525D547 /* FirebaseAuth-macOS.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4082,7 +4075,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FirebaseCoreInternal-iOS/FirebaseCoreInternal-iOS-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCoreInternal-iOS/FirebaseCoreInternal-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4105,7 +4098,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0266432BD45275CC40D52BE79718DAEF /* GTMSessionFetcher-macOS.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4151,7 +4143,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseAuth-iOS/FirebaseAuth-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4186,7 +4178,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/GTMSessionFetcher-iOS/GTMSessionFetcher-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4219,7 +4211,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/PromisesObjC-iOS/PromisesObjC-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4242,7 +4234,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0924AEFD89E82AC208814F83732A8F7C /* GoogleUtilities-macOS.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4278,7 +4269,6 @@
 			baseConfigurationReference = 537FB2C8B0A7920D53675035E6EEE789 /* Pods-firebase_auth_sample (macOS).release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -4323,7 +4313,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/PromisesObjC-iOS/PromisesObjC-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4395,7 +4385,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCore-iOS/FirebaseCore-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4560,7 +4550,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseAuth-iOS/FirebaseAuth-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4583,7 +4573,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BE541BE06978041CF9CF08CC3CE21F62 /* GoogleUtilities-macOS.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4629,7 +4618,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/GTMSessionFetcher-iOS/GTMSessionFetcher-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4663,7 +4652,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCore-iOS/FirebaseCore-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4686,7 +4675,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1590D00DF6789D60C734F26424FD41B /* GTMSessionFetcher-macOS.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4769,7 +4757,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/GoogleUtilities-iOS/GoogleUtilities-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4792,7 +4780,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 485E591F12D2B0CD413B2DA3ABFA93A7 /* PromisesObjC-macOS.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4826,7 +4813,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB92C8B66C258063BFCE4F2734D8E456 /* FirebaseCore-macOS.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4871,7 +4857,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/GoogleUtilities-iOS/GoogleUtilities-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4907,7 +4893,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FirebaseCoreInternal-iOS/FirebaseCoreInternal-iOS-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCoreInternal-iOS/FirebaseCoreInternal-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4931,7 +4917,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA5A5D2FFF3956874D0F04C915F23708 /* FirebaseAuth-macOS.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4966,7 +4951,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA57C6C44D400498B26213262E0705DC /* PromisesObjC-macOS.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -5000,7 +4984,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D8BD9AC5B31699B122C301DA15390F54 /* FirebaseCore-macOS.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -5035,7 +5018,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2851BE1843EB340E6BAD1399CD6D1073 /* FirebaseCoreInternal-macOS.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -5071,7 +5053,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E74C370F9DD302C761BC737753AA0CE0 /* FirebaseCoreInternal-macOS.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -5108,7 +5089,6 @@
 			baseConfigurationReference = 98A6E7B1F39DE2D559F878E9B6D8B127 /* Pods-firebase_auth_sample (macOS).debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
