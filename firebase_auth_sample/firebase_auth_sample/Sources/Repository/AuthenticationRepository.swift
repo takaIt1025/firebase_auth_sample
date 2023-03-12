@@ -9,19 +9,33 @@ import Foundation
 import FirebaseAuth
 
 protocol AuthenticationRepository {
- 
-    func signUp(email: String, password: String, name: String) async throws-> (String?, AuthErrorCode.Code?)
-    
-    func login() -> Void
+    // 新規登録
+    func signUp(email: String, password: String, name: String) async throws-> User
+    // ログイン
+    func signIn(email: String, password: String) async throws -> User
+    // ログアウト
+    func signOut() throws
 }
 
 class AuthenticationRepositoryImpl : AuthenticationRepository{
-    
-    func login() {
+    func signOut() throws {
+        // TODO: 今後実装
     }
     
+    func signIn(email: String, password: String) async throws -> User{
+        do {
+           return  try await FirebaseAuthDataSourceImpl().signIn(email: email, password: password)
+        } catch {
+            throw error
+        }
+    }
     
-    func signUp(email: String, password: String, name: String) async throws -> (String?, AuthErrorCode.Code?){
-        return try await AuthenticationControllerAPI().signUp(email: email, password: password, name: name)
+    func signUp(email: String, password: String, name: String) async throws -> User{
+        
+        do {
+            return try await FirebaseAuthDataSourceImpl().signUp(email: email, password: password, name: name)
+        } catch let error as NSError {
+            throw error
+        }
     }
 }
