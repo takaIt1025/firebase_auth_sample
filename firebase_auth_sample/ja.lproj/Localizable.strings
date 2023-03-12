@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  firebase_auth_sample
+
+  Created by Takaya Ito on 2023/03/12.
+  
+*/
+
+// 
+"firebase_signInFailed" = "ログイン時にエラーが発生しました。";
+"firebase_networkError" = "通信エラーです。";
+"firebase_weakPassword" = "パスワードが脆弱です。";
+"firebase_wrongPassword" = "メールアドレス、もしくはパスワードが違います。";
+"firebase_userNotFound" = "アカウントがありません。";
+"firebase_invalidEmail" = "正しくないメールアドレスの形式です。";
+"firebase_emailAlreadyInUse" = "既に登録されているメールアドレスです。";
+"firebase_unknown" = "エラーが起きました。";
