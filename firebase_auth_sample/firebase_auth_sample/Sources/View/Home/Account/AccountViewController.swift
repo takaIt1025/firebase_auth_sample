@@ -9,6 +9,8 @@ import Foundation
 
 import SwiftUI
 import FirebaseCore
+import UniformTypeIdentifiers
+import PhotosUI
 
 struct AccountViewController: View {
     @ObservedObject var viewModel = AccountViewModel()
@@ -28,6 +30,35 @@ struct AccountViewController: View {
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
                                         .frame(maxWidth: 280)
             }
+            
+
+            // TODO: レイアウトの調整
+            // TODO: firebaseStorageとの通信
+            VStack {
+                if let image = viewModel.importedImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                } else {
+                    Text("No image imported")
+                        .font(.headline)
+                }
+
+                Button(action: {
+                    viewModel.isPhotoPickerVisible.toggle()
+                }) {
+                    Text("Import Image from Camera Roll")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                    }
+                }
+                .padding()
+                .sheet(isPresented: $viewModel.isPhotoPickerVisible) {
+                    PhotoPicker(isPresented: $viewModel.isPhotoPickerVisible, selectedImage: $viewModel.importedImage)
+            }
+            
             
             Button(action: {
                 Task {

@@ -17,6 +17,8 @@ class AccountViewModel :ObservableObject{
     @Published var page : PageName? = nil
     @Published var isError: Bool = false
     @Published var errorMessage: String = ""
+    @Published var importedImage: UIImage?
+    @Published var isPhotoPickerVisible: Bool = false
     
     
     func pushUpdateButton() async {

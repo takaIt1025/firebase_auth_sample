@@ -28,6 +28,7 @@
 		323AB27D29BDBC9B0067F854 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 323AB27F29BDBC9B0067F854 /* Localizable.strings */; };
 		329C19E929BE245B00F84F73 /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C19E829BE245B00F84F73 /* UserDataSource.swift */; };
 		329C19EB29BE325500F84F73 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C19EA29BE325500F84F73 /* AccountViewModel.swift */; };
+		329C19F929C229AC00F84F73 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C19F829C229AC00F84F73 /* PhotoPicker.swift */; };
 		32A261BE2967120D00582809 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BD2967120D00582809 /* Tests_iOS.swift */; };
 		32A261C02967120D00582809 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BF2967120D00582809 /* Tests_iOSLaunchTests.swift */; };
 		32A261CA2967120D00582809 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261C92967120D00582809 /* Tests_macOS.swift */; };
@@ -84,6 +85,7 @@
 		323AB28529BDD0F20067F854 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		329C19E829BE245B00F84F73 /* UserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
 		329C19EA29BE325500F84F73 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		329C19F829C229AC00F84F73 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		32A261A52967120500582809 /* firebase_auth_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebase_auth_sampleApp.swift; sourceTree = "<group>"; };
 		32A261A62967120500582809 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		32A261A72967120D00582809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		323AB28029BDC6AA0067F854 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				329C19F829C229AC00F84F73 /* PhotoPicker.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				323AB26429A9AD5B0067F854 /* example.swift in Sources */,
 				323AB27129BD8F950067F854 /* AuthError.swift in Sources */,
 				323AB258296F12390067F854 /* AccountViewController.swift in Sources */,
+				329C19F929C229AC00F84F73 /* PhotoPicker.swift in Sources */,
 				329C19E929BE245B00F84F73 /* UserDataSource.swift in Sources */,
 				323AB25F296F14BE0067F854 /* AuthenticationRepository.swift in Sources */,
 				32A261EF296724BD00582809 /* AppDelegate.swift in Sources */,
