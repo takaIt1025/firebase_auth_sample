@@ -17,9 +17,9 @@ struct HomeViewController: View {
     var body: some View {
         TabView(selection: $selectTag) {
             ItemsListView().tabItem{
-                Text("tab1")
+                Text("tab_home_name")
             }.tag(PageName.ItemsListView)
-            AccountViewController().tabItem{Text("tab2")}.tag(PageName.AccountView)
+            AccountViewController().tabItem{Text("tab_mypage_name")}.tag(PageName.AccountView)
         }
     }
 }

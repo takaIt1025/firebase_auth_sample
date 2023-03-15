@@ -15,3 +15,5 @@
 "firebase_invalidEmail" = "正しくないメールアドレスの形式です。";
 "firebase_emailAlreadyInUse" = "既に登録されているメールアドレスです。";
 "firebase_unknown" = "エラーが起きました。";
+"tab_home_name" = "ホーム";
+"tab_mypage_name" = "マイページ";

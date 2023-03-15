@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  firebase_auth_sample
+
+  Created by Takaya Ito on 2023/03/12.
+  
+*/
+
+"firebase_signInFailed" = "An error occurred during the login process.";
+"firebase_networkError" = "It is a communication error.";
+"firebase_weakPassword" = "The password is weak.";
+"firebase_wrongPassword" = "The email address or password is incorrect.";
+"firebase_userNotFound" = "There is no account.";
+"firebase_invalidEmail" = "The email address format is incorrect.";
+"firebase_emailAlreadyInUse" = "The email address is already registered.";
+"firebase_unknown" = "An error has occurred.";
+"tab_home_name" = "home";
+"tab_mypage_name" = "mypage";
