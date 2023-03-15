@@ -15,6 +15,8 @@ protocol AuthenticationRepository {
     func signIn(email: String, password: String) async throws -> String
     // ログアウト
     func signOut() throws
+    // ログインしているユーザの情報を取得
+    func getCurrentUser() -> User?
 }
 
 class AuthenticationRepositoryImpl : AuthenticationRepository{
@@ -38,7 +40,7 @@ class AuthenticationRepositoryImpl : AuthenticationRepository{
             throw error
         }
     }
-    func getCurrentUser() -> User?{
+    func getCurrentUser() -> User? {
         FirebaseAuthDataSourceImpl().currentUser
     }
 }

@@ -19,6 +19,48 @@ struct AccountViewController: View {
             VStack(alignment: .center) {
                 Text("マイページ")
             }
+            
+            // TODO: firebaseStorageとの通信
+            VStack {
+                if let image = viewModel.importedImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                        .aspectRatio(contentMode: .fit)
+                } else {
+                    Text("No Data")
+                        .font(.headline)
+                }
+                
+                Button(action: {
+                    viewModel.isPhotoPickerVisible.toggle()
+                }) {
+                    Text("プロフィール画像を選択する")
+                        .foregroundColor(.blue)
+                }
+                
+                Button(action: {
+                    Task {
+                        if let image = viewModel.importedImage {
+                            if let imageData = image.jpegData(compressionQuality: 1.0) {
+                                await viewModel.updateUserPhoto(imageData: imageData)
+                            }
+                        }
+                    }
+                }) {
+                    Text("プロフィール画像を更新")
+                        .padding()
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                .padding()
+                .sheet(isPresented: $viewModel.isPhotoPickerVisible) {
+                    PhotoPicker(isPresented: $viewModel.isPhotoPickerVisible, selectedImage: $viewModel.importedImage)
+                }
+            }
+            
+            
             VStack(spacing: 24) {
                 TextField("名前", text: $viewModel.inputName).textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(maxWidth: 280)
@@ -30,35 +72,6 @@ struct AccountViewController: View {
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
                                         .frame(maxWidth: 280)
             }
-            
-
-            // TODO: レイアウトの調整
-            // TODO: firebaseStorageとの通信
-            VStack {
-                if let image = viewModel.importedImage {
-                    Image(uiImage: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                } else {
-                    Text("No image imported")
-                        .font(.headline)
-                }
-
-                Button(action: {
-                    viewModel.isPhotoPickerVisible.toggle()
-                }) {
-                    Text("Import Image from Camera Roll")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                    }
-                }
-                .padding()
-                .sheet(isPresented: $viewModel.isPhotoPickerVisible) {
-                    PhotoPicker(isPresented: $viewModel.isPhotoPickerVisible, selectedImage: $viewModel.importedImage)
-            }
-            
             
             Button(action: {
                 Task {

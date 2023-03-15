@@ -20,12 +20,35 @@ class AccountViewModel :ObservableObject{
     @Published var importedImage: UIImage?
     @Published var isPhotoPickerVisible: Bool = false
     
+    // 認証機能のRepository
+    private let authRepository: AuthenticationRepository = AuthenticationRepositoryImpl()
+    // ユーザー情報のRepository
+    private let userRepository: UserRepository = UserRepositoryImpl()
+    // 画像関連のRepository
+    private let storageRepository: StorageRepository = StorageRepositoryImpl()
+    
+    
+    func updateUserPhoto(imageData: Data) async {
+        Task { () -> Void in
+            do {
+                guard let uid = authRepository.getCurrentUser()?.uid else {return}
+                let imageUrl = try await storageRepository.uploadImage(imageData: imageData, userId: uid)
+                try await userRepository.updateUserInfo(uid: uid, photoURL: imageUrl)
+            } catch {
+            // TODO: エラー処理を追加
+                print("updateUserPhoto(imageData: Data) でエラー")
+            }
+        }
+    }
     
     func pushUpdateButton() async {
         Task { () -> Void in
             do {
-                guard let uid = AuthenticationRepositoryImpl().getCurrentUser()?.uid else {return}
-                try await UserRepositoryImpl().updateUserInfo(uid: uid, name: self.inputName, email: self.inputEmail, selfIntroduction: self.inputIntroudction)
+                // ログインユーザーの情報を取得
+                guard let uid = authRepository.getCurrentUser()?.uid else {return}
+                
+                // TODO: phtoURL一旦空にしているので、調整が必要
+                try await userRepository.updateUserInfo(uid: uid, name: self.inputName, email: self.inputEmail, photoURL:"", selfIntroduction: self.inputIntroudction)
                 
                 return DispatchQueue.main.async {
                     self.page = PageName.HomeView

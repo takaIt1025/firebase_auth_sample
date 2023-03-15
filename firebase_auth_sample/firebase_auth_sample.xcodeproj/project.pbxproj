@@ -28,6 +28,9 @@
 		323AB27D29BDBC9B0067F854 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 323AB27F29BDBC9B0067F854 /* Localizable.strings */; };
 		329C19E929BE245B00F84F73 /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C19E829BE245B00F84F73 /* UserDataSource.swift */; };
 		329C19EB29BE325500F84F73 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C19EA29BE325500F84F73 /* AccountViewModel.swift */; };
+		329C19F129C0DCCC00F84F73 /* StorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C19F029C0DCCC00F84F73 /* StorageRepository.swift */; };
+		329C19F429C2194900F84F73 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 329C19F329C2194900F84F73 /* FirebaseStorage */; };
+		329C19F629C2194900F84F73 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 329C19F529C2194900F84F73 /* FirebaseStorageCombine-Community */; };
 		329C19F929C229AC00F84F73 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C19F829C229AC00F84F73 /* PhotoPicker.swift */; };
 		32A261BE2967120D00582809 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BD2967120D00582809 /* Tests_iOS.swift */; };
 		32A261C02967120D00582809 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BF2967120D00582809 /* Tests_iOSLaunchTests.swift */; };
@@ -85,6 +88,8 @@
 		323AB28529BDD0F20067F854 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		329C19E829BE245B00F84F73 /* UserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
 		329C19EA29BE325500F84F73 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		329C19F029C0DCCC00F84F73 /* StorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRepository.swift; sourceTree = "<group>"; };
+		329C19F729C222EA00F84F73 /* firebase-auth-sample--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "firebase-auth-sample--iOS--Info.plist"; sourceTree = "<group>"; };
 		329C19F829C229AC00F84F73 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		32A261A52967120500582809 /* firebase_auth_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebase_auth_sampleApp.swift; sourceTree = "<group>"; };
 		32A261A62967120500582809 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -113,10 +118,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				32389E9029BE04A40038F7EE /* FirebaseFirestoreSwift in Frameworks */,
+				329C19F629C2194900F84F73 /* FirebaseStorageCombine-Community in Frameworks */,
 				943FF3E04EC69CB8067DFB61 /* Pods_firebase_auth_sample__iOS_.framework in Frameworks */,
 				32389E8E29BE04A40038F7EE /* FirebaseFirestoreCombine-Community in Frameworks */,
 				323AB27629BDABB80067F854 /* FirebaseAuth in Frameworks */,
 				32389E8C29BE04A40038F7EE /* FirebaseFirestore in Frameworks */,
+				329C19F429C2194900F84F73 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +262,7 @@
 			children = (
 				323AB25E296F14BE0067F854 /* AuthenticationRepository.swift */,
 				32389E8829BE043F0038F7EE /* UserRepository.swift */,
+				329C19F029C0DCCC00F84F73 /* StorageRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 		32A2619F2967120500582809 = {
 			isa = PBXGroup;
 			children = (
+				329C19F729C222EA00F84F73 /* firebase-auth-sample--iOS--Info.plist */,
 				323AB27F29BDBC9B0067F854 /* Localizable.strings */,
 				32A261A42967120500582809 /* firebase_auth_sample */,
 				32A261B32967120D00582809 /* macOS */,
@@ -388,6 +397,8 @@
 				32389E8B29BE04A40038F7EE /* FirebaseFirestore */,
 				32389E8D29BE04A40038F7EE /* FirebaseFirestoreCombine-Community */,
 				32389E8F29BE04A40038F7EE /* FirebaseFirestoreSwift */,
+				329C19F329C2194900F84F73 /* FirebaseStorage */,
+				329C19F529C2194900F84F73 /* FirebaseStorageCombine-Community */,
 			);
 			productName = "firebase_auth_sample (iOS)";
 			productReference = 32A261AC2967120D00582809 /* firebase_auth_sample.app */;
@@ -634,6 +645,7 @@
 				323AB27129BD8F950067F854 /* AuthError.swift in Sources */,
 				323AB258296F12390067F854 /* AccountViewController.swift in Sources */,
 				329C19F929C229AC00F84F73 /* PhotoPicker.swift in Sources */,
+				329C19F129C0DCCC00F84F73 /* StorageRepository.swift in Sources */,
 				329C19E929BE245B00F84F73 /* UserDataSource.swift in Sources */,
 				323AB25F296F14BE0067F854 /* AuthenticationRepository.swift in Sources */,
 				32A261EF296724BD00582809 /* AppDelegate.swift in Sources */,
@@ -822,7 +834,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = x86_64;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "firebase-auth-sample--iOS--Info.plist";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アルバムの写真を選択します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -853,6 +869,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "firebase-auth-sample--iOS--Info.plist";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アルバムの写真を選択します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1070,6 +1089,14 @@
 				kind = branch;
 			};
 		};
+		329C19F229C2194900F84F73 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1092,6 +1119,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 323AB27429BDABB80067F854 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		329C19F329C2194900F84F73 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 329C19F229C2194900F84F73 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		329C19F529C2194900F84F73 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 329C19F229C2194900F84F73 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

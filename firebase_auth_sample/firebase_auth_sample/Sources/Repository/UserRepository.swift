@@ -7,31 +7,40 @@
 
 import FirebaseFirestore
 import Combine
+import SwiftUI
 protocol UserRepository {
     // ユーザー情報登録
     func saveUserInfo(uid: String, name: String?, email: String?, selfIntroduction: String?) async throws
     // ユーザー情報更新
-    func updateUserInfo(uid: String, name: String?, email: String?, selfIntroduction: String?) async throws
+    func updateUserInfo(uid: String, name: String?, email: String?,photoURL:String?, selfIntroduction: String?) async throws
+    // ユーザーの画像更新
+    func updateUserInfo(uid: String, photoURL:String?) async throws
     // ユーザー情報取得
 //    func getUserInfo(uid: String) async throws -> User?
 }
 
 class UserRepositoryImpl: UserRepository {
-        private let db = Firestore.firestore()
-        private let userCollectionRef = Firestore.firestore().collection("users")
+    func updateUserInfo(uid: String, photoURL: String?) async throws {
+        
+    }
+    
+    private let db = Firestore.firestore()
+    private let userCollectionRef = Firestore.firestore().collection("users")
+    
+    let userDataSource: UserDataSource = UserDataSourceImpl()
         
     func saveUserInfo(uid: String, name: String?, email: String?, selfIntroduction: String?) async throws
     {
         do{
-            try await UserDataSourceImpl().saveUserInfo(uid: uid, name: name, email: email, selfIntroduction: selfIntroduction)
+            try await userDataSource.saveUserInfo(uid: uid, name: name, email: email, selfIntroduction: selfIntroduction)
         } catch {
             throw error
         }
     }
     
-    func updateUserInfo(uid: String, name: String?, email: String?, selfIntroduction: String?) async throws {
+    func updateUserInfo(uid: String, name: String?, email: String?, photoURL: String?, selfIntroduction: String?) async throws {
         do{
-            try await UserDataSourceImpl().updateUserInfo(uid: uid, name: name, email: email, selfIntroduction: selfIntroduction)
+//            try await userDataSource.updateUserInfo(uid: uid, name: name, email: email, photoURL:String?, selfIntroduction: selfIntroduction)
         } catch {
             throw error
         }
