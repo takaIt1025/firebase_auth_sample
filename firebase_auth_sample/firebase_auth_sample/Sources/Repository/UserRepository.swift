@@ -16,7 +16,7 @@ protocol UserRepository {
     // ユーザーの画像更新
     func updateUserInfo(uid: String, photoURL:String?) async throws
     // ユーザー情報取得
-//    func getUserInfo(uid: String) async throws -> User?
+    func getUserInfo(uid: String) async throws -> UserInfo?
 }
 
 class UserRepositoryImpl: UserRepository {

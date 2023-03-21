@@ -9,13 +9,18 @@ import SwiftUI
 import FirebaseCore
 
 @main
-struct firebase_auth_sampleApp: App {
+class firebase_auth_sampleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
-    
+    // 全画面で利用するユーザ情報
+    var userInfo = UserInfo(data: [:])
+    required init() {
+        // 初期化処理
+    }
     var body: some Scene {
         WindowGroup {
             LoginView()
+                .environmentObject(userInfo)
         }
     }
+    
 }

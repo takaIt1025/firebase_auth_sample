@@ -10,12 +10,19 @@ import FirebaseAuth
 import SwiftUI
 
 class LoginViewModel :ObservableObject{
+    // ログイン時に取得したデータを一時保存するための変数
+    @Published var uinfo: UserInfo? = nil
     @Published var inputName: String = ""
     @Published var inputEmail: String = ""
     @Published var inputPassword: String = ""
     @Published var page : PageName? = nil
     @Published var isError: Bool = false
     @Published var errorMessage: String = ""
+    
+    // 認証機能のRepository
+    private let authRepository: AuthenticationRepository = AuthenticationRepositoryImpl()
+    // ユーザー情報のRepository
+    private let userRepository: UserRepository = UserRepositoryImpl()
     
     func pushSignUpButton() async {
         Task { () -> Void in
@@ -42,7 +49,10 @@ class LoginViewModel :ObservableObject{
     func pushLoginButton() async {
         Task { () -> Void in
             do {
-                try await AuthenticationRepositoryImpl().signIn(email: self.inputEmail, password: self.inputPassword)
+                // メールアドレスとパスワードからユーザーIDを取得
+                let uid = try await AuthenticationRepositoryImpl().signIn(email: self.inputEmail, password: self.inputPassword)
+                // ユーザーIDからユーザー情報を取得
+                self.uinfo = try await userRepository.getUserInfo(uid: uid)
                 
                 return DispatchQueue.main.async {
                     self.page = PageName.HomeView

@@ -9,6 +9,8 @@ import SwiftUI
 import FirebaseCore
 
 struct LoginView: View {
+    // ログイン時にグローバル情報を更新するため
+    @EnvironmentObject var userInfo: UserInfo
     @ObservedObject var viewModel = LoginViewModel()
     var body: some View {
         NavigationView {
@@ -48,6 +50,8 @@ struct LoginView: View {
                     Task {
                     print("##ユーザ登録処理")
                     await viewModel.pushLoginButton()
+                    // ログインした時にグローバル変数としてユーザー情報を保存
+                    userInfo.saveUserInfo(data: viewModel.uinfo)
                     }
                 },
                label: {
