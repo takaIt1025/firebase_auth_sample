@@ -32,6 +32,7 @@
 		329C19F429C2194900F84F73 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 329C19F329C2194900F84F73 /* FirebaseStorage */; };
 		329C19F629C2194900F84F73 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 329C19F529C2194900F84F73 /* FirebaseStorageCombine-Community */; };
 		329C19F929C229AC00F84F73 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C19F829C229AC00F84F73 /* PhotoPicker.swift */; };
+		329C19FB29C5D8EA00F84F73 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C19FA29C5D8EA00F84F73 /* HomeViewModel.swift */; };
 		32A261BE2967120D00582809 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BD2967120D00582809 /* Tests_iOS.swift */; };
 		32A261C02967120D00582809 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261BF2967120D00582809 /* Tests_iOSLaunchTests.swift */; };
 		32A261CA2967120D00582809 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A261C92967120D00582809 /* Tests_macOS.swift */; };
@@ -91,6 +92,7 @@
 		329C19F029C0DCCC00F84F73 /* StorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRepository.swift; sourceTree = "<group>"; };
 		329C19F729C222EA00F84F73 /* firebase-auth-sample--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "firebase-auth-sample--iOS--Info.plist"; sourceTree = "<group>"; };
 		329C19F829C229AC00F84F73 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		329C19FA29C5D8EA00F84F73 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		32A261A52967120500582809 /* firebase_auth_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebase_auth_sampleApp.swift; sourceTree = "<group>"; };
 		32A261A62967120500582809 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		32A261A72967120D00582809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				323AB24F2967E1830067F854 /* HomeViewController.swift */,
+				329C19FA29C5D8EA00F84F73 /* HomeViewModel.swift */,
 				323AB256296F12180067F854 /* ItemsList */,
 				323AB255296F11F50067F854 /* Account */,
 			);
@@ -634,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				323AB27329BD9F110067F854 /* PageName.swift in Sources */,
+				329C19FB29C5D8EA00F84F73 /* HomeViewModel.swift in Sources */,
 				323AB26829ABDAFC0067F854 /* Example3.swift in Sources */,
 				323AB262296F17C30067F854 /* AuthenticationResult.swift in Sources */,
 				32389E8929BE043F0038F7EE /* UserRepository.swift in Sources */,
