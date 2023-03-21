@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum PageName {
+enum PageName: Int {
     case HomeView
     case ItemsListView
     case AccountView

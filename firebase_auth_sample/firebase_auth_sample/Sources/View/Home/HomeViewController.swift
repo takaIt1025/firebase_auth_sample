@@ -13,9 +13,9 @@ struct HomeViewController: View {
 //    var viewModel = ContentViewModel()
 //    @State var inputName: String = ""
 //    @State var inputEmail: String = ""
-    @State var selectTag = 1
+    @ObservedObject var viewModel  = HomeViewModel()
     var body: some View {
-        TabView(selection: $selectTag) {
+        TabView(selection: $viewModel.selectTag) {
             ItemsListView().tabItem{
                 Text("tab_home_name")
             }.tag(PageName.ItemsListView)
