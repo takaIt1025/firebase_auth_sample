@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
 
 target 'firebase_auth_sample (iOS)' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,6 +8,7 @@ target 'firebase_auth_sample (iOS)' do
 
   # Pods for firebase_auth_sample (iOS)
   pod 'FirebaseAuth'
+  pod 'Swinject', '~> 2.7'
 
 end
 
@@ -16,5 +18,6 @@ target 'firebase_auth_sample (macOS)' do
 
   # Pods for firebase_auth_sample (macOS)
   pod 'FirebaseAuth'
+  pod 'Swinject', '~> 2.7'
 
 end

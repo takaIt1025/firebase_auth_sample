@@ -27,9 +27,11 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (3.1.0)
   - PromisesObjC (2.1.1)
+  - Swinject (2.8.3)
 
 DEPENDENCIES:
   - FirebaseAuth
+  - Swinject (~> 2.7)
 
 SPEC REPOS:
   trunk:
@@ -39,6 +41,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - PromisesObjC
+    - Swinject
 
 SPEC CHECKSUMS:
   FirebaseAuth: 0e415d29d846c1dce2fb641e46f35e9888d9bec6
@@ -47,7 +50,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: c2bdc4cf2ce786c4d2e6b3bcfd599a25ca78f06f
   GTMSessionFetcher: c9e714f7eec91a55641e2bab9f45fd83a219b882
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+  Swinject: 893c9a543000ac2f10ee4cbaf0933c6992c935d5
 
-PODFILE CHECKSUM: 81cab19889f67131fa439959a5a396b4e6a2cafd
+PODFILE CHECKSUM: 8f061517bb31e6f5e691595b3c0c31f0a3643b1a
 
 COCOAPODS: 1.11.3
