@@ -21,7 +21,11 @@ protocol UserRepository {
 
 class UserRepositoryImpl: UserRepository {
     func updateUserInfo(uid: String, photoURL: String?) async throws {
-        
+        do{
+            try await userDataSource.updateUserInfo(uid: uid, name: nil, email: nil, photoURL: photoURL, selfIntroduction: nil)
+        } catch {
+            throw error
+        }
     }
     
     private let db = Firestore.firestore()

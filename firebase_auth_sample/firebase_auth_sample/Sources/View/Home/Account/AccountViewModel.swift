@@ -31,8 +31,11 @@ class AccountViewModel :ObservableObject{
     func updateUserPhoto(imageData: Data) async {
         Task { () -> Void in
             do {
+                // ユーザーIDを取得
                 guard let uid = authRepository.getCurrentUser()?.uid else {return}
+                // Storageに対してイメージをアップロードし、保存先のURLを取得
                 let imageUrl = try await storageRepository.uploadImage(imageData: imageData, userId: uid)
+                // 画像をURLをユーザ情報に保存
                 try await userRepository.updateUserInfo(uid: uid, photoURL: imageUrl)
             } catch {
             // TODO: エラー処理を追加
