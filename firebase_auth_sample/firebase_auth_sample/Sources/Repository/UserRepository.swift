@@ -44,7 +44,7 @@ class UserRepositoryImpl: UserRepository {
     
     func updateUserInfo(uid: String, name: String?, email: String?, photoURL: String?, selfIntroduction: String?) async throws {
         do{
-//            try await userDataSource.updateUserInfo(uid: uid, name: name, email: email, photoURL:String?, selfIntroduction: selfIntroduction)
+            try await userDataSource.updateUserInfo(uid: uid, name: name, email: email, photoURL:"", selfIntroduction: selfIntroduction)
         } catch {
             throw error
         }

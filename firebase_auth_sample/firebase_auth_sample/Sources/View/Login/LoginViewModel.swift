@@ -11,18 +11,33 @@ import SwiftUI
 
 class LoginViewModel :ObservableObject{
     // ログイン時に取得したデータを一時保存するための変数
-    @Published var uinfo: UserInfo? = nil
+    @Published var userInfo: UserInfo = UserInfo(data: [:])
     @Published var inputName: String = ""
     @Published var inputEmail: String = ""
     @Published var inputPassword: String = ""
     @Published var page : PageName? = nil
     @Published var isError: Bool = false
     @Published var errorMessage: String = ""
+    @Published var downloadedImage: UIImage?
     
     // 認証機能のRepository
     private let authRepository: AuthenticationRepository = AuthenticationRepositoryImpl()
     // ユーザー情報のRepository
     private let userRepository: UserRepository = UserRepositoryImpl()
+    
+    // 画像関連のRepository
+     private let storageRepository: StorageRepository = StorageRepositoryImpl()
+     
+    func getImageURL() {
+        
+    }
+    
+     func downloadPhoto() {
+         guard let uid = authRepository.getCurrentUser()?.uid else {return}
+         storageRepository.downloadImage(userId: uid) { image in
+             self.downloadedImage = image
+         }
+     }
     
     func pushSignUpButton() async {
         Task { () -> Void in
@@ -52,7 +67,8 @@ class LoginViewModel :ObservableObject{
                 // メールアドレスとパスワードからユーザーIDを取得
                 let uid = try await AuthenticationRepositoryImpl().signIn(email: self.inputEmail, password: self.inputPassword)
                 // ユーザーIDからユーザー情報を取得
-                self.uinfo = try await userRepository.getUserInfo(uid: uid)
+                let u = try await userRepository.getUserInfo(uid: uid)
+                self.userInfo.saveUserInfo(data: u)
                 
                 return DispatchQueue.main.async {
                     self.page = PageName.HomeView

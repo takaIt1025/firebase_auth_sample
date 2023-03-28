@@ -13,6 +13,8 @@ import UniformTypeIdentifiers
 import PhotosUI
 
 struct AccountViewController: View {
+    
+    @EnvironmentObject var userInfo: UserInfo
     @ObservedObject var viewModel = AccountViewModel()
     var body: some View {
         ScrollView {
@@ -22,7 +24,9 @@ struct AccountViewController: View {
             
             // TODO: firebaseStorageとの通信
             VStack {
-                if let image = viewModel.importedImage {
+                if let url = URL(string: userInfo.photoURL ?? ""),
+                   let imageData = try? Data(contentsOf: url),
+                   let image = UIImage(data: imageData){
                     Image(uiImage: image)
                         .resizable()
                         .frame(width: 150, height: 150)
@@ -41,7 +45,7 @@ struct AccountViewController: View {
                 
                 Button(action: {
                     Task {
-                        if let image = viewModel.importedImage {
+                        if let image = viewModel.downloadedImage {
                             if let imageData = image.jpegData(compressionQuality: 1.0) {
                                 await viewModel.updateUserPhoto(imageData: imageData)
                             }
@@ -56,7 +60,17 @@ struct AccountViewController: View {
                 }
                 .padding()
                 .sheet(isPresented: $viewModel.isPhotoPickerVisible) {
-                    PhotoPicker(isPresented: $viewModel.isPhotoPickerVisible, selectedImage: $viewModel.importedImage)
+                    PhotoPicker(isPresented: $viewModel.isPhotoPickerVisible, selectedImage: $viewModel.downloadedImage)
+                }
+                
+                Button(action: {
+                    viewModel.downloadPhoto()
+                }) {
+                    Text("Download Image from Firebase Storage")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
                 }
             }
             
@@ -88,6 +102,15 @@ struct AccountViewController: View {
                    .cornerRadius(8)
            })
             
+        }
+        .onAppear{
+            // Viewが初めて表示される際に実行されるメソッド
+            viewModel.inputName = userInfo.name
+            viewModel.inputEmail = userInfo.email
+            viewModel.inputIntroudction = userInfo.selfIntroduction ?? ""
+            print("####AccountView onAppear")
+            print("Name: \(userInfo.name)")
+            print("Email: \(userInfo.email)")
         }
     }
 }

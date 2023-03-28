@@ -50,8 +50,6 @@ struct LoginView: View {
                     Task {
                     print("##ユーザ登録処理")
                     await viewModel.pushLoginButton()
-                    // ログインした時にグローバル変数としてユーザー情報を保存
-                    userInfo.saveUserInfo(data: viewModel.uinfo)
                     }
                 },
                label: {
@@ -66,12 +64,7 @@ struct LoginView: View {
             }
         }.alert(isPresented: $viewModel.isError){
             Alert(title: Text("エラー"), message: Text(LocalizedStringKey($viewModel.errorMessage.wrappedValue)), dismissButton: .default(Text("閉じる"), action: {}))
-        }
+        }.environmentObject(viewModel.userInfo)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}

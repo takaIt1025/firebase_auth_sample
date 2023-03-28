@@ -17,8 +17,8 @@ class AccountViewModel :ObservableObject{
     @Published var page : PageName? = nil
     @Published var isError: Bool = false
     @Published var errorMessage: String = ""
-    @Published var importedImage: UIImage?
     @Published var isPhotoPickerVisible: Bool = false
+    @Published var downloadedImage: UIImage?
     
     // 認証機能のRepository
     private let authRepository: AuthenticationRepository = AuthenticationRepositoryImpl()
@@ -27,6 +27,12 @@ class AccountViewModel :ObservableObject{
     // 画像関連のRepository
     private let storageRepository: StorageRepository = StorageRepositoryImpl()
     
+    func downloadPhoto() {
+        guard let uid = authRepository.getCurrentUser()?.uid else {return}
+        storageRepository.downloadImage(userId: uid) { image in
+            self.downloadedImage = image
+        }
+    }
     
     func updateUserPhoto(imageData: Data) async {
         Task { () -> Void in

@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class UserInfo: ObservableObject {
     // ユーザーID
-    @Published var uid: String
+     var uid: String
     // ユーザー名
     @Published var name: String
     // メールアドレス
@@ -24,17 +24,17 @@ class UserInfo: ObservableObject {
         self.uid = data["uid"] as? String ?? ""
         self.name = data["name"] as? String ?? ""
         self.email = data["email"] as? String ?? ""
-        self.photoURL = data["photoURL"] as? String
-        self.selfIntroduction = data["selfIntroduction"] as? String
+        self.photoURL = data["photoURL"] as? String ?? ""
+        self.selfIntroduction = data["selfIntroduction"] as? String ?? ""
     }
     
     func saveUserInfo(data: UserInfo?)  {
-        guard let data = data else { return }
-        self.uid = data.uid
-        self.name = data.name
-        self.email = data.email
-        self.photoURL = data.photoURL
-        self.selfIntroduction = data.selfIntroduction
+            guard let data = data else { return }
+            self.uid = data.uid
+            self.name = data.name
+            self.email = data.email
+            self.photoURL = data.photoURL
+            self.selfIntroduction = data.selfIntroduction
     }
 }
 
