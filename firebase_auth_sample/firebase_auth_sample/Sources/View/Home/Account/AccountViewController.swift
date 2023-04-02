@@ -24,7 +24,13 @@ struct AccountViewController: View {
             
             // TODO: firebaseStorageとの通信
             VStack {
-                if let url = URL(string: userInfo.photoURL ?? ""),
+                if let image = viewModel.myImage {
+                    Image(uiImage: image)
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .aspectRatio(contentMode: .fit)
+                    
+                } else if let url = URL(string: userInfo.photoURL ?? ""),
                    let imageData = try? Data(contentsOf: url),
                    let image = UIImage(data: imageData){
                     Image(uiImage: image)
@@ -45,7 +51,7 @@ struct AccountViewController: View {
                 
                 Button(action: {
                     Task {
-                        if let image = viewModel.downloadedImage {
+                        if let image = viewModel.myImage {
                             if let imageData = image.jpegData(compressionQuality: 1.0) {
                                 await viewModel.updateUserPhoto(imageData: imageData)
                             }
@@ -60,7 +66,7 @@ struct AccountViewController: View {
                 }
                 .padding()
                 .sheet(isPresented: $viewModel.isPhotoPickerVisible) {
-                    PhotoPicker(isPresented: $viewModel.isPhotoPickerVisible, selectedImage: $viewModel.downloadedImage)
+                    PhotoPicker(isPresented: $viewModel.isPhotoPickerVisible, selectedImage: $viewModel.myImage)
                 }
                 
                 Button(action: {
