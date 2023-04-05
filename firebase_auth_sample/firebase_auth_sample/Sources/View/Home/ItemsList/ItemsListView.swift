@@ -5,51 +5,52 @@
 //  Created by Takaya Ito on 2023/01/11.
 //
 
-
+import Foundation
 import SwiftUI
 import FirebaseCore
+import UniformTypeIdentifiers
+import PhotosUI
 
 struct ItemsListView: View {
 //    var viewModel = ContentViewModel()
 //    @State var inputName: String = ""
 //    @State var inputEmail: String = ""
     @State var selectTag = 1
+    
+    
+    @ObservedObject var viewModel = ItemsListViewModel()
     var body: some View {
         ScrollView {
-            VStack(alignment: .center) {
-                Text("一覧")
-                    .font(.title)
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
+            VStack(alignment: .center, spacing: 20){
+                ForEach(viewModel.items) { item in
+                    if let url = URL(string: viewModel.items.first?.imageURL ?? "" ),
+                       let imageData = try? Data(contentsOf: url),
+                       let image = UIImage(data: imageData){
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(width: 150, height: 150)
+                            .aspectRatio(contentMode: .fit)
+                    }
                 }
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
+            }
+        }
+        .onAppear{
+            Task {
+                do {
+                    viewModel.items = try await viewModel.fetchItems()
+                    print("####tetchItems:\(viewModel.items.count)")
+                    print("###1: \(viewModel.items[0].imageURL)")
+                    print("###2: \(viewModel.items[1].imageURL)")
+                    
+                } catch {
+                    print("updateUserPhoto(imageData: Data) でエラー")
                 }
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                }
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                }
-                HStack(spacing:3) {
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                    Image("タープ").resizable(resizingMode: .stretch).aspectRatio(contentMode: .fit)
-                }
+                
             }
         }
     }
 }
+
 
 struct ItemsListView_Previews: PreviewProvider {
     static var previews: some View {
