@@ -52,6 +52,8 @@
 		32EE761A29D9991600EB20DC /* ItemsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EE761929D9991600EB20DC /* ItemsListViewModel.swift */; };
 		32EE761C29D99E1C00EB20DC /* ItemsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EE761B29D99E1C00EB20DC /* ItemsRepository.swift */; };
 		32EE761E29D99EA200EB20DC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EE761D29D99EA200EB20DC /* Item.swift */; };
+		32EE762129DF324B00EB20DC /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EE762029DF324B00EB20DC /* ItemDetailViewController.swift */; };
+		32EE762329DF325D00EB20DC /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EE762229DF325D00EB20DC /* ItemDetailViewModel.swift */; };
 		943FF3E04EC69CB8067DFB61 /* Pods_firebase_auth_sample__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9470587D2DB5097FE91AFB55 /* Pods_firebase_auth_sample__iOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		32EE761929D9991600EB20DC /* ItemsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewModel.swift; sourceTree = "<group>"; };
 		32EE761B29D99E1C00EB20DC /* ItemsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsRepository.swift; sourceTree = "<group>"; };
 		32EE761D29D99EA200EB20DC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		32EE762029DF324B00EB20DC /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		32EE762229DF325D00EB20DC /* ItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModel.swift; sourceTree = "<group>"; };
 		64D03090E26F1D2F6920592E /* Pods-firebase_auth_sample (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase_auth_sample (iOS).debug.xcconfig"; path = "Target Support Files/Pods-firebase_auth_sample (iOS)/Pods-firebase_auth_sample (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		6AA45A29D67856ECE3D41CDC /* Pods_firebase_auth_sample__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firebase_auth_sample__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9470587D2DB5097FE91AFB55 /* Pods_firebase_auth_sample__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firebase_auth_sample__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +176,7 @@
 		323AB2472967C3970067F854 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				32EE761F29DF322900EB20DC /* ItemDetail */,
 				32AB047729BDF24F00942CB8 /* Content */,
 				323AB24E2967E1530067F854 /* Home */,
 				323AB24D2967C5EB0067F854 /* Components */,
@@ -262,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				323AB253296DE5BB0067F854 /* ItemsListView.swift */,
+				32EE761929D9991600EB20DC /* ItemsListViewModel.swift */,
 			);
 			path = ItemsList;
 			sourceTree = "<group>";
@@ -372,6 +378,15 @@
 			children = (
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		32EE761F29DF322900EB20DC /* ItemDetail */ = {
+			isa = PBXGroup;
+			children = (
+				32EE762029DF324B00EB20DC /* ItemDetailViewController.swift */,
+				32EE762229DF325D00EB20DC /* ItemDetailViewModel.swift */,
+			);
+			path = ItemDetail;
 			sourceTree = "<group>";
 		};
 		7895D74A8CCBE1559482A13E /* Pods */ = {
@@ -666,8 +681,10 @@
 				32EE761E29D99EA200EB20DC /* Item.swift in Sources */,
 				323AB26629A9BEFE0067F854 /* Example2.swift in Sources */,
 				32A261CF2967120D00582809 /* LoginView.swift in Sources */,
+				32EE762129DF324B00EB20DC /* ItemDetailViewController.swift in Sources */,
 				32A261CD2967120D00582809 /* firebase_auth_sampleApp.swift in Sources */,
 				323AB25C296F13E50067F854 /* FirebaseAuthDataSource.swift in Sources */,
+				32EE762329DF325D00EB20DC /* ItemDetailViewModel.swift in Sources */,
 				32A261EC2967215B00582809 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

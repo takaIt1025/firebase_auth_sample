@@ -20,26 +20,31 @@ struct ItemsListView: View {
     
     @ObservedObject var viewModel = ItemsListViewModel()
     var body: some View {
-        ScrollView {
-                    VStack(alignment: .center, spacing: 20){
-                        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 3), spacing: 0) {
-                            ForEach(viewModel.items) { item in
-                                if let url = URL(string: item.imageURL) {
-                                    AsyncImage(url: url) { phase in
-                                        switch phase {
-                                        case .success(let image):
-                                            image
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .frame(width: width, height: width)
-                                                .clipped()
-                                        case .failure, .empty:
-                                            Color.gray
-                                                .frame(width: width, height: width)
-                                        default:
-                                            ProgressView()
-                                                .frame(width: width, height: width)
+        NavigationView {
+                    ScrollView {
+                        VStack(alignment: .center, spacing: 20){
+                            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 3), spacing: 0) {
+                                ForEach(viewModel.items) { item in
+                                    if let url = URL(string: item.imageURL) {
+                                        NavigationLink(destination: ItemDetailViewController(viewModel: ItemDetailViewModel(item: item))) {
+                                            AsyncImage(url: url) { phase in
+                                                switch phase {
+                                                case .success(let image):
+                                                    image
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fill)
+                                                        .frame(width: width, height: width)
+                                                        .clipped()
+                                                case .failure, .empty:
+                                                    Color.gray
+                                                        .frame(width: width, height: width)
+                                                default:
+                                                    ProgressView()
+                                                        .frame(width: width, height: width)
+                                                }
+                                            }
                                         }
+                                        .buttonStyle(PlainButtonStyle())
                                     }
                                 }
                             }
