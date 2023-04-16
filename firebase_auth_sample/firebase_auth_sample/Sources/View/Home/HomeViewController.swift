@@ -21,6 +21,14 @@ struct HomeViewController: View {
             }.tag(PageName.ItemsListView)
             AccountViewController().tabItem{Text("tab_mypage_name")}.tag(PageName.AccountView)
         }
+        .onChange(of: viewModel.selectTag) { tab in
+            // 商品一覧を選択したとき
+            if tab == PageName.ItemsListView {
+                NotificationCenter.default.post(name: Notification.Name("updateImages"), object: nil)
+            }
+        }
+        
+        .navigationBarBackButtonHidden(true)
     }
 }
 

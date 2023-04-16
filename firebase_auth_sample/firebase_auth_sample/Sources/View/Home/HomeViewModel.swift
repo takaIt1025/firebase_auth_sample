@@ -9,4 +9,6 @@ import Foundation
 
 class HomeViewModel :ObservableObject{
     @Published var selectTag:PageName = PageName.HomeView
+    @Published var itemsListVM = ItemsListViewModel()
+    @Published var acountVM = AccountViewModel()
 }
