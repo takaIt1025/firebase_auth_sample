@@ -18,9 +18,12 @@ class ItemsListViewModel: ObservableObject {
     
     // 商品一覧を取得
     // TODO: エラ〜ハンドリングの考慮
-    func fetchItems() async throws -> [Item] {
+    func fetchItems() async throws {
         do {
-            return try await itemsRepository.getItems()
+            let fetchedItems = try await itemsRepository.getItems()
+            DispatchQueue.main.async {
+                self.items = fetchedItems
+            }
         } catch {
             throw error
         }
