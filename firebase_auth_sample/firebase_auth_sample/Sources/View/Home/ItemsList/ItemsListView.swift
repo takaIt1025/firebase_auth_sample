@@ -16,20 +16,34 @@ struct ItemsListView: View {
 //    @State var inputName: String = ""
 //    @State var inputEmail: String = ""
     @State var selectTag = 1
-    
+    let width = UIScreen.main.bounds.width / 3 - 5;
     
     @ObservedObject var viewModel = ItemsListViewModel()
     var body: some View {
         ScrollView {
-            VStack(alignment: .center, spacing: 20){
-                ForEach(viewModel.items) { item in
-                    if let url = URL(string: viewModel.items.first?.imageURL ?? "" ),
-                       let imageData = try? Data(contentsOf: url),
-                       let image = UIImage(data: imageData){
-                        Image(uiImage: image)
-                            .resizable()
-                            .frame(width: 150, height: 150)
-                            .aspectRatio(contentMode: .fit)
+                    VStack(alignment: .center, spacing: 20){
+                        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 3), spacing: 0) {
+                            ForEach(viewModel.items) { item in
+                                if let url = URL(string: item.imageURL) {
+                                    AsyncImage(url: url) { phase in
+                                        switch phase {
+                                        case .success(let image):
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: width, height: width)
+                                                .clipped()
+                                        case .failure, .empty:
+                                            Color.gray
+                                                .frame(width: width, height: width)
+                                        default:
+                                            ProgressView()
+                                                .frame(width: width, height: width)
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
