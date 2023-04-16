@@ -25,7 +25,8 @@ class Item: Identifiable, Codable {
 //    var status_id: Int
 //    var created_at: Timestamp
 //    var updated_at: Timestamp
-    init(title: String, description: String, price: Int, imageURL: String) {
+    init(id:String?, title: String, description: String, price: Int, imageURL: String) {
+        self.id = id
         self.title = title
         self.description = description
         self.price = price
