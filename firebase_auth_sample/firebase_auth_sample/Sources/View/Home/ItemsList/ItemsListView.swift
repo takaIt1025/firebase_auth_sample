@@ -46,20 +46,26 @@ struct ItemsListView: View {
                         }
                     }
                 }
-            }
-        }
         .onAppear{
             Task {
+                try await viewModel.fetchItems()
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("updateImages"))) { _ in
+                Task {
+                    try await viewModel.fetchItems()
+                }
+            }
+        
+        .refreshable {
+            Task {
                 do {
-                    viewModel.items = try await viewModel.fetchItems()
-                    print("####tetchItems:\(viewModel.items.count)")
-                    print("###1: \(viewModel.items[0].imageURL)")
-                    print("###2: \(viewModel.items[1].imageURL)")
-                    
+                    print("###itemsListView プルリフレッシュ")
+                    try await viewModel.fetchItems()
                 } catch {
                     print("updateUserPhoto(imageData: Data) でエラー")
+                    
                 }
-                
             }
         }
     }
