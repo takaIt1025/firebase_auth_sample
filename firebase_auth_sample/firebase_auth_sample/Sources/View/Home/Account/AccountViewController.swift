@@ -68,16 +68,6 @@ struct AccountViewController: View {
                 .sheet(isPresented: $viewModel.isPhotoPickerVisible) {
                     PhotoPicker(isPresented: $viewModel.isPhotoPickerVisible, selectedImage: $viewModel.myImage)
                 }
-                
-                Button(action: {
-                    viewModel.downloadPhoto()
-                }) {
-                    Text("Download Image from Firebase Storage")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }
             }
             
             
